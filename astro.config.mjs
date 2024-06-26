@@ -40,12 +40,15 @@ export default defineConfig({
       editLink: {
         baseUrl: "https://github.com/threlte/threlte/edit/main/apps/docs",
       },
+      // components: {
+      //   Sidebar: "./src/components/test.astro",
+      // },
       plugins: [
         starlightUtils({ multiSidebar: { switcherStyle: "dropdown" } }),
-        starlightLinksValidator(),
         // starlightVersions({
         //   versions: [{ slug: "1.0" }],
         // }),
+        starlightLinksValidator(),
       ],
     }),
   ],
