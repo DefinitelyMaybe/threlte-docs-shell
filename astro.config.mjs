@@ -1,8 +1,8 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import starlightVersions from "starlight-versions";
 import starlightLinksValidator from "starlight-links-validator";
-import starlightUtils from "@lorenzo_lewis/starlight-utils";
+// import starlightVersions from "starlight-versions";
+// import ThreltePlugin from "./src/utils/ThreltePlugin";
 
 // https://astro.build/config
 export default defineConfig({
@@ -40,14 +40,14 @@ export default defineConfig({
       editLink: {
         baseUrl: "https://github.com/threlte/threlte/edit/main/apps/docs",
       },
-      // components: {
-      //   Sidebar: "./src/components/test.astro",
-      // },
+      components: {
+        Sidebar: "./src/components/sidebar/Sidebar.astro",
+      },
       plugins: [
-        starlightUtils({ multiSidebar: { switcherStyle: "dropdown" } }),
         // starlightVersions({
         //   versions: [{ slug: "1.0" }],
         // }),
+        // ThreltePlugin(),
         starlightLinksValidator(),
       ],
     }),
