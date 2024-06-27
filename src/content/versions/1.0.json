@@ -1,18 +1,27 @@
 {
   "sidebar": [
     {
-      "label": "Guides",
-      "items": [
-        {
-          "label": "Example Guide",
-          "link": "/guides/example/"
-        }
-      ]
+      "label": "Learn",
+      "autogenerate": {
+        "directory": "learn"
+      }
     },
     {
-      "label": "Reference",
+      "label": "Examples",
       "autogenerate": {
-        "directory": "reference"
+        "directory": "examples"
+      }
+    },
+    {
+      "label": "Core",
+      "autogenerate": {
+        "directory": "reference/core"
+      }
+    },
+    {
+      "label": "Extras",
+      "autogenerate": {
+        "directory": "reference/extras"
       }
     }
   ]

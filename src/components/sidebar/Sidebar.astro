@@ -2,6 +2,13 @@
 import type { Props } from "@astrojs/starlight/props";
 import { AstroError } from "astro/errors";
 import Dropdown from "./Dropdown.astro";
+// import { getVersionFromSlug, getVersionSidebar } from '../../libs/versions'
+
+// const sidebar = getVersionSidebar(
+//   getVersionFromSlug(starlightVersionsConfig, starlightConfig, Astro.props.entry.slug),
+//   Astro.props.sidebar,
+// )
+// Astro.props.sidebar = sidebar
 
 export type SidebarData = {
   isCurrentSidebar: boolean;
@@ -18,9 +25,7 @@ export type SidebarData = {
 // 2. Create a new derived set of `Astro.props` that only contains one set of sidebar entries
 // 3. Check if the current page being rendered is current page to determine if this sidebar group should be selected
 
-const strippedProps: Props = { ...Astro.props };
-
-const multiSidebarData: Array<SidebarData> = strippedProps.sidebar.map(
+const multiSidebarData: Array<SidebarData> = Astro.props.sidebar.map(
   (entry) => {
     if (entry.type !== "group") {
       throw new AstroError(
@@ -61,4 +66,4 @@ if (
 }
 ---
 
-<Dropdown starlightProps={strippedProps} {multiSidebarData} />
+<Dropdown starlightProps={Astro.props} {multiSidebarData} />

@@ -2,7 +2,6 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightLinksValidator from "starlight-links-validator";
 // import starlightVersions from "starlight-versions";
-// import ThreltePlugin from "./src/utils/ThreltePlugin";
 
 // https://astro.build/config
 export default defineConfig({
@@ -47,7 +46,6 @@ export default defineConfig({
         // starlightVersions({
         //   versions: [{ slug: "1.0" }],
         // }),
-        // ThreltePlugin(),
         starlightLinksValidator(),
       ],
     }),
