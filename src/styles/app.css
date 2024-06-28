@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-faded {
+    @apply text-white/60;
+  }
+
+  .text-highlight {
+    @apply font-bold text-white;
+  }
+}
+
+/* Dark mode colors. */
+:root {
+  --sl-color-bg-sidebar: #0a0f19;
+  --sl-color-black: #0a0f19;
+  --sl-color-bg-nav: #0a0f19;
+  /* --sl-color-text-accent: #fe3d00; */
+  /* --sl-nav-height: 8rem; */
+}
+/* Light mode colors. */
+:root[data-theme="light"] {
+  --sl-color-black: #ffffff;
+}
+
+.header {
+  z-index: var(--sl-z-index-navbar);
+  position: fixed;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  width: 100%;
+  height: var(--sl-nav-height);
+  border-bottom: 1px solid var(--sl-color-hairline-shade);
+  padding: var(--sl-nav-pad-y) var(--sl-nav-pad-x);
+  padding-inline-end: var(--sl-nav-pad-x);
+  background-color: var(--sl-color-bg-nav);
+  border-color: rgb(254 61 0 / 0.25);
+  border-bottom-width: 1px;
+}
+
+.right-sidebar {
+  border-inline-start: none;
+}
+
+#starlight__sidebar
+  > div
+  > ul
+  > li
+  > details
+  > ul
+  > li
+  > a[aria-current="page"] {
+  color: #fe3d00;
+  background: transparent;
+}
+
+starlight-toc > nav > ul > li > a[aria-current="true"] {
+  color: #fe3d00;
+}
+
+aside.starlight-aside--note {
+  @apply rounded-md border border-blue-500 bg-blue-500/20;
+}
+
+aside.starlight-aside--note a {
+  @apply text-blue-500;
+}
+
+aside.starlight-aside--tip {
+  @apply rounded-md border border-green-500 bg-green-800/30;
+}
+
+aside.starlight-aside--tip .starlight-aside__title {
+  @apply text-green-500;
+}
+
+aside.starlight-aside--tip a {
+  @apply text-green-500;
+}
+
+aside.starlight-aside--caution {
+  @apply rounded-md border border-yellow-500 bg-yellow-800/30;
+}
+
+aside.starlight-aside--caution a {
+  @apply text-yellow-500;
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2f7dc630;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2f7dc6aa;
+}
+
+/* @media (min-width: 800px) {
+  :root {
+    --sl-nav-height: 8rem;
+  }
+} */
