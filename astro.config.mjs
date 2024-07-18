@@ -1,21 +1,42 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightLinksValidator from "starlight-links-validator";
-// import starlightVersions from "starlight-versions";
-
 import svelte from "@astrojs/svelte";
-
 import tailwind from "@astrojs/tailwind";
+import { resolve } from "path";
+import { rehypeHeadingIds } from "@astrojs/markdown-remark";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 // https://astro.build/config
 export default defineConfig({
+  markdown: {
+    rehypePlugins: [
+      rehypeHeadingIds,
+      [
+        rehypeAutolinkHeadings,
+        {
+          behavior: "wrap",
+        },
+      ],
+    ],
+  },
   integrations: [
     starlight({
       title: "Threlte",
-      social: {
-        github: "https://github.com/withastro/starlight",
+      logo: {
+        src: "$assets/logo/threlte-logo.png",
+        replacesTitle: true,
       },
-      customCss: ["./src/styles/app.css"],
+      social: {
+        github: "https://github.com/threlte/threlte",
+        twitter: "https://twitter.com/threlte",
+        discord: "https://discord.gg/EqUBCfCaGm",
+      },
+      customCss: ["./src/styles/app.css", "./src/styles/tailwind.css"],
+      components: {
+        Header: "$components/Header.astro",
+        Sidebar: "$components/Sidebar.astro",
+      },
       sidebar: [
         {
           label: "Learn",
@@ -41,6 +62,30 @@ export default defineConfig({
             directory: "reference/extras",
           },
         },
+        {
+          label: "GLTF",
+          autogenerate: {
+            directory: "reference/gltf",
+          },
+        },
+        {
+          label: "Rapier",
+          autogenerate: {
+            directory: "reference/rapier",
+          },
+        },
+        {
+          label: "Theatre",
+          autogenerate: {
+            directory: "reference/theatre",
+          },
+        },
+        {
+          label: "Flex",
+          autogenerate: {
+            directory: "reference/flex",
+          },
+        },
       ],
       locales: {
         root: {
@@ -55,17 +100,23 @@ export default defineConfig({
       editLink: {
         baseUrl: "https://github.com/threlte/threlte/edit/main/apps/docs",
       },
-      components: {
-        Sidebar: "./src/components/Sidebar/Sidebar.astro",
+      expressiveCode: {
+        themes: ["dracula-soft"],
       },
-      plugins: [
-        // starlightVersions({
-        //   versions: [{ slug: "1.0" }],
-        // }),
-        starlightLinksValidator(),
-      ],
+      plugins: [starlightLinksValidator()],
     }),
     svelte(),
-    tailwind(),
+    tailwind({
+      // Disable the default base styles:
+      applyBaseStyles: false,
+    }),
   ],
+  vite: {
+    resolve: {
+      alias: {
+        $components: resolve("./src/components"),
+        $assets: resolve("./src/assets"),
+      },
+    },
+  },
 });
