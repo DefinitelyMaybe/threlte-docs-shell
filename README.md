@@ -1,15 +1,14 @@
 # Threlte Starlight Shell
 
-Minimal content, maximum features
+## TODO
 
-# Features
-
-- From old docs
-  - StackBlitz examples
-  - theme
-- Starlight Plugins
-  - search
-  - versioning
-  - multiple sidebar w/ dropdown
-  - i18n
-  - internal links validation
+- TopNav
+  - Search component styling
+  - PackageNav component
+- MD headings links
+- Sidebar
+  - highlighted/current page styling
+  - hover page styling
+- Right Sidebar
+  - styling
+- StackBlitz examples from old docs

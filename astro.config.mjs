@@ -10,15 +10,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 // https://astro.build/config
 export default defineConfig({
   markdown: {
-    rehypePlugins: [
-      rehypeHeadingIds,
-      [
-        rehypeAutolinkHeadings,
-        {
-          behavior: "wrap",
-        },
-      ],
-    ],
+    rehypePlugins: [rehypeHeadingIds, rehypeAutolinkHeadings],
   },
   integrations: [
     starlight({
@@ -32,10 +24,11 @@ export default defineConfig({
         twitter: "https://twitter.com/threlte",
         discord: "https://discord.gg/EqUBCfCaGm",
       },
-      customCss: ["./src/styles/app.css", "./src/styles/tailwind.css"],
+      customCss: ["./src/styles/app.css"],
       components: {
         Header: "$components/Header.astro",
         Sidebar: "$components/Sidebar.astro",
+        MobileMenuFooter: "$components/MobileMenuFooter.astro",
       },
       sidebar: [
         {

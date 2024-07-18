@@ -6,7 +6,6 @@ import LanguageSelect from "virtual:starlight/components/LanguageSelect";
 import Search from "virtual:starlight/components/Search";
 import SiteTitle from "virtual:starlight/components/SiteTitle";
 import SocialIcons from "./SocialIcons.astro";
-import PackageNav from "./PackageNav.astro";
 
 /**
  * Render the `Search` component if Pagefind is enabled or the default search component has been overridden.
@@ -14,6 +13,13 @@ import PackageNav from "./PackageNav.astro";
 const shouldRenderSearch =
   config.pagefind ||
   config.components.Search !== "@astrojs/starlight/components/Search.astro";
+
+const packages = [
+  { name: "Learn", href: "/learn/getting-started/intro/" },
+  { name: "Examples", href: "/examples/" },
+  { name: "Core", href: "/reference/core/components/example/" },
+  { name: "Extras", href: "/reference/extras/example/" },
+];
 ---
 
 <div class="header sl-flex">
@@ -21,7 +27,13 @@ const shouldRenderSearch =
     <SiteTitle {...Astro.props} />
   </div>
   <div class="sl-flex">
-    {shouldRenderSearch && <Search {...Astro.props} />}
+    <div class="flex flex-row shrink-0 items-center">
+      <p>test</p>
+      <!-- {packages.map(({ name, href }) => <a href=`${href}` class="package-links px-4 no-underline">{name}</a>)} -->
+    </div>
+    <div>
+      {shouldRenderSearch && <Search {...Astro.props} />}
+    </div>
   </div>
   <div class="sl-hidden md:sl-flex right-group">
     <div class="sl-flex social-icons">
@@ -30,8 +42,6 @@ const shouldRenderSearch =
     <LanguageSelect {...Astro.props} />
   </div>
 </div>
-<!-- The Package-Nav only works because of a lot of css in $styles/app.css -->
-<PackageNav {...Astro.props} />
 
 <style>
   .header {

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --sl-color-accent-low: #421107;
   --sl-color-accent: #bd2b00;
@@ -13,50 +17,37 @@
   --sl-color-bg-sidebar: #0a0f19;
   --sl-color-bg-nav: #0a0f19;
   --sl-color-bg: #0a0f19;
+  --sl-nav-height: 5rem;
 }
 
 /* Style the Markdown heading links. */
-.sl-markdown-content :is(h1, h2, h3, h4, h5, h6) > a {
+/* .sl-markdown-content :is(h1, h2, h3, h4, h5, h6) > a {
   color: var(--sl-color-white);
   text-decoration: none;
+  height: 20px;
 
   &:hover {
     text-decoration: underline;
   }
-}
-
-.main-frame {
-  padding-top: calc(var(--sl-nav-height) * 2 + var(--sl-mobile-toc-height));
-}
+} */
 
 header.header {
-  border-bottom: none;
-  /* background-color: #0a0f19; */
-}
-
-.site-title {
-  max-width: var(--sl-sidebar-width);
-}
-
-mobile-starlight-toc > nav {
-  top: calc(var(--sl-nav-height) * 2 - 1px);
+  @apply border-b-[2px] border-b-orange/25;
 }
 
 #starlight__sidebar {
+  background-color: var(--sl-color-bg);
   position: fixed;
-  top: calc(var(--sl-nav-height) * 2 - 1px);
   overflow-y: scroll;
-  /* background-color: #0a0f19; */
+  border-inline-end: none;
 }
 
 .right-sidebar {
   border-inline-start: none;
 }
 
-@media (min-width: 72rem) {
-  .right-sidebar {
-    padding-top: calc(var(--sl-nav-height) * 2);
-  }
+.expressive-code {
+  @apply mb-6;
 }
 
 /* For Webkit-based browsers (Chrome, Safari and Opera) */
