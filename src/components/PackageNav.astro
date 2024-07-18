@@ -1,0 +1,27 @@
+---
+const packages = [
+  {name:'Learn', href:'/learn/getting-started/intro/'},
+  {name:'Examples', href:'/examples/'},
+  {name:'Core', href:'/reference/core/components/example/'},
+  {name:'Extras', href:'/reference/extras/example/'},
+]
+---
+
+<div class="packages-nav left-0 w-full absolute flex items-center justify-between border-b-[1px] border-b-orange/25">
+  <div class="flex">
+    {packages.map(({ name, href }) => <a href=`${href}` class="package-links px-4 no-underline">{name}</a>)}
+  </div>
+  <div class="px-4 cursor-pointer">...</div>
+</div>
+
+<style type="postcss">
+  .packages-nav {
+    top: var(--sl-nav-height);
+    height: var(--sl-nav-height);
+    background-color: #0a0f19;
+  }
+
+  .package-links {
+    color: var(--sl-color-text);
+  }
+</style>
