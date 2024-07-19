@@ -1,5 +1,4 @@
 ---
-import "../styles/app.css";
 import Layout from "../layouts/LandingPage.astro";
 import Footer from "$components/Footer.astro";
 import { Card, CardGrid } from "@astrojs/starlight/components";
@@ -9,6 +8,7 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
   <a href="/learn/getting-started/intro">Start Building</a>
   <br />
   <a href="https://starlight.astro.build">Read the Starlight docs</a>
+
   <div class="flex flex-col gap-14 py-24">
     <div class="flex flex-col items-center gap-4">
       <div class="text-faded flex-1 text-center text-2xl font-light">
@@ -100,6 +100,21 @@ c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.9,5.2-4.1,9.9-8.6,12.7l-2
     </div>
   </div>
 
+  <CardGrid stagger>
+    <Card title="Update content" icon="pencil">
+      Edit `src/content/docs/index.mdx` to see this page change.
+    </Card>
+    <Card title="Add new content" icon="add-document">
+      Add Markdown or MDX files to `src/content/docs` to create new pages.
+    </Card>
+    <Card title="Configure your site" icon="setting">
+      Edit your `sidebar` and other config in `astro.config.mjs`.
+    </Card>
+    <Card title="Read the docs" icon="open-book">
+      Learn more in [the Starlight Docs](https://starlight.astro.build/).
+    </Card>
+  </CardGrid>
+
   <div class="my-12 flex flex-col items-center justify-center">
     <h2 class="text-glow-white mb-8 text-center text-5xl font-bold">
       Join the Threlte Community.
@@ -124,19 +139,5 @@ c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.9,5.2-4.1,9.9-8.6,12.7l-2
       Discord
     </a>
   </div>
-  <CardGrid stagger>
-    <Card title="Update content" icon="pencil">
-      Edit `src/content/docs/index.mdx` to see this page change.
-    </Card>
-    <Card title="Add new content" icon="add-document">
-      Add Markdown or MDX files to `src/content/docs` to create new pages.
-    </Card>
-    <Card title="Configure your site" icon="setting">
-      Edit your `sidebar` and other config in `astro.config.mjs`.
-    </Card>
-    <Card title="Read the docs" icon="open-book">
-      Learn more in [the Starlight Docs](https://starlight.astro.build/).
-    </Card>
-  </CardGrid>
   <Footer />
 </Layout>
