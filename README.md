@@ -2,6 +2,7 @@
 
 ## TODO
 
+- Landing Page
 - TopNav
   - Search component styling
   - PackageNav component
