@@ -29,13 +29,10 @@ const packages = [
   <div class="sl-flex">
     <div class="flex flex-row shrink-0 items-center">
       <p>test</p>
-      <!-- {packages.map(({ name, href }) => <a href=`${href}` class="package-links px-4 no-underline">{name}</a>)} -->
     </div>
-    <div>
-      {shouldRenderSearch && <Search {...Astro.props} />}
-    </div>
+    <div>{shouldRenderSearch && <Search {...Astro.props} />}</div>
   </div>
-  <div class="sl-hidden md:sl-flex right-group">
+  <div class="sl-hidden md:sl-flex right-group justify-end">
     <div class="sl-flex social-icons">
       <SocialIcons {...Astro.props} />
     </div>
