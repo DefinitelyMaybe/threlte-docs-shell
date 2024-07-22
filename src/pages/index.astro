@@ -2,13 +2,25 @@
 import Layout from "../layouts/LandingPage.astro";
 import Footer from "$components/Footer.astro";
 import { Card, CardGrid } from "@astrojs/starlight/components";
+import { Image } from "astro:assets";
+import logoSrc from "$assets/logo/threlte-logo.png";
+
+const docsURL = "/learn/getting-started/intro";
 ---
 
 <Layout>
-  <a href="/learn/getting-started/intro">Start Building</a>
-  <br />
-  <a href="https://starlight.astro.build">Read the Starlight docs</a>
-
+  <header class="flex flex-row justify-between">
+    <Image src={logoSrc} width={222} alt="" class="p-4" />
+    <nav>
+      <a href={docsURL}>Documentation</a>
+    </nav>
+    <p>...</p>
+  </header>
+  <div>
+    <a href="/learn/getting-started/intro">Start Building</a>
+    <br />
+    <a href="https://starlight.astro.build">Read the Starlight docs</a>
+  </div>
   <div class="flex flex-col gap-14 py-24">
     <div class="flex flex-col items-center gap-4">
       <div class="text-faded flex-1 text-center text-2xl font-light">
