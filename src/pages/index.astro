@@ -12,19 +12,23 @@ const docsURL = "/learn/getting-started/intro";
 
 <Layout>
   <header class="flex flex-row justify-between items-center">
-    <Image src={logoSrc} width={222} alt="" class="p-4" />
-    <nav>
-      <a href={docsURL}>Documentation</a>
-    </nav>
+    <div class="flex items-center">
+      <Image src={logoSrc} width={222} alt="" class="p-4" />
+      <nav>
+        <a href={docsURL}>Documentation</a>
+      </nav>
+    </div>
     <div>
       <Socials />
     </div>
   </header>
   <!-- <Hero /> -->
-  <div>
-    <a href="/learn/getting-started/intro">Start Building</a>
-    <br />
-    <a href="https://starlight.astro.build">Read the Starlight docs</a>
+  <div class="flex h-32 justify-center items-center">
+    <div>
+      <a href="/learn/getting-started/intro">Start Building</a>
+      <br />
+      <a href="https://starlight.astro.build">Read the Starlight docs</a>
+    </div>
   </div>
   <div class="flex flex-col gap-14 py-24">
     <div class="flex flex-col items-center gap-4">

@@ -33,9 +33,14 @@ export default defineConfig({
       sidebar: [
         {
           label: "Learn",
-          autogenerate: {
-            directory: "learn",
-          },
+          items: [
+            {
+              label: "Getting Started",
+              autogenerate: {
+                directory: "learn/getting-started",
+              },
+            },
+          ],
         },
         {
           label: "Examples",

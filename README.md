@@ -8,7 +8,6 @@
   - PackageNav component
 - Content
   - headings links
-  - code blocks styling
 - Sidebar
   - highlighted/current page styling
   - hover page styling
