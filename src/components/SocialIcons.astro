@@ -1,36 +1,36 @@
 ---
-import config from "virtual:starlight/user-config";
-import { Icon } from "@astrojs/starlight/components";
-import type { Props } from "@astrojs/starlight/props";
+import config from 'virtual:starlight/user-config'
+import { Icon } from '@astrojs/starlight/components'
+import type { Props } from '@astrojs/starlight/props'
 
-type Platform = keyof NonNullable<typeof config.social>;
-type SocialConfig = NonNullable<NonNullable<typeof config.social>[Platform]>;
+type Platform = keyof NonNullable<typeof config.social>
+type SocialConfig = NonNullable<NonNullable<typeof config.social>[Platform]>
 const links = Object.entries(config.social || {}) as [
-  "github" | "twitter" | "discord",
-  SocialConfig,
-][];
+	'github' | 'twitter' | 'discord',
+	SocialConfig
+][]
 ---
 
 {
-  links.length > 0 && (
-    <>
-      {links.map(([platform, { label, url }]) => (
-        <a href={url} rel="me" class="sl-flex">
-          <span class="sr-only">{label}</span>
-          <Icon name={platform} />
-        </a>
-      ))}
-    </>
-  )
+	links.length > 0 && (
+		<>
+			{links.map(([platform, { label, url }]) => (
+				<a href={url} rel="me" class="sl-flex">
+					<span class="sr-only">{label}</span>
+					<Icon name={platform} />
+				</a>
+			))}
+		</>
+	)
 }
 
 <style>
-  a {
-    color: var(--sl-color-white);
-    padding: 0.5em;
-    margin: -0.5em;
-  }
-  a:hover {
-    opacity: 0.66;
-  }
+	a {
+		color: var(--sl-color-white);
+		padding: 0.5em;
+		margin: -0.5em;
+	}
+	a:hover {
+		opacity: 0.66;
+	}
 </style>

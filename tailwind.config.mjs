@@ -1,4 +1,5 @@
 import starlightPlugin from "@astrojs/starlight-tailwind";
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -48,5 +49,27 @@ export default {
       },
     },
   },
-  plugins: [starlightPlugin()],
+  plugins: [
+    starlightPlugin(),
+    function ({ addUtilities, matchUtilities, theme }) {
+      matchUtilities(
+        {
+          glow: (value) => {
+            return {
+              boxShadow: `0 0px 40px -3px ${value}`,
+            };
+          },
+          "text-glow": (value) => {
+            return {
+              filter: `drop-shadow(0 0px 50px ${value})`,
+            };
+          },
+        },
+        {
+          values: flattenColorPalette(theme("colors")),
+          type: "color",
+        }
+      );
+    },
+  ],
 };

@@ -3,6 +3,7 @@
 ## TODO
 
 - Landing Page
+  - socials
   - styling
 - TopNav
   - PackageNav component
