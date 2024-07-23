@@ -3,19 +3,15 @@
 ## TODO
 
 - Landing Page
+  - styling
 - TopNav
-  - Search component styling
   - PackageNav component
 - Content
   - headings links
-- Sidebar
-  - highlighted/current page styling
-  - hover page styling
-- Right Sidebar
-  - styling
 - StackBlitz examples from old docs
+- Fonts
 
 ## Notes
 
-- Removed public folder so that assets can be preprocessed
+- Public folder is for assets that aren't preprocessed
   - https://docs.astro.build/en/guides/images/
