@@ -19,6 +19,7 @@ export default defineConfig({
         src: "$assets/logo/threlte-logo.png",
         replacesTitle: true,
       },
+      favicon: "/icons/favicon.ico",
       social: {
         github: "https://github.com/threlte/threlte",
         twitter: "https://twitter.com/threlte",
