@@ -5,6 +5,7 @@
 - Landing Page
   - socials
   - styling
+  - Fixed Top
 - TopNav
   - PackageNav component
 - Content
