@@ -15,15 +15,13 @@ const testimonials = await getCollection('testimonials')
 	>
 	</div>
 
-	<sup class="my-0 font-semibold text-blue-400">Start your Journey</sup>
-	<h1 class="my-0">Don't take our word for it.</h1>
-	<div class="my-12">
-		<div class="columns-1 gap-6 md:columns-2 lg:columns-3">
-			{
-				testimonials.map((testimonial) => {
-					return <Testimonial testimonial={testimonial} />
-				})
-			}
-		</div>
+	<sup class="my-0 text-base text-blue-400">Start your Journey</sup>
+	<h1 class="my-0 text-5xl">Don't take our word for it.</h1>
+	<div class="mt-12 columns-1 gap-6 md:columns-2 lg:columns-3">
+		{
+			testimonials.map((testimonial) => {
+				return <Testimonial testimonial={testimonial} />
+			})
+		}
 	</div>
 </section>
