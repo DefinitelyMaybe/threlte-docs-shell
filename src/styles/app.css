@@ -74,6 +74,10 @@ details#starlight__mobile-toc > div.dropdown {
   @apply bg-blue-900;
 }
 
+div.mobile-preferences {
+  @apply border-none;
+}
+
 /* ======= Code Blocks ========================== */
 
 .expressive-code {
