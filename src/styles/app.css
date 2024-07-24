@@ -3,28 +3,30 @@
 @tailwind utilities;
 
 :root {
-  --sl-color-accent-low: #421107;
-  --sl-color-accent: #bd2b00;
-  --sl-color-accent-high: #f7b7a7;
-  --sl-color-white: #ffffff;
-  --sl-color-gray-1: #ebeef4;
-  --sl-color-gray-2: #bec2ca;
-  --sl-color-gray-3: #848c9a;
-  --sl-color-gray-4: #525865;
-  --sl-color-gray-5: #323844;
-  --sl-color-gray-6: #212732;
-  --sl-color-black: #15181d;
-  --sl-color-bg-sidebar: #0a0f19;
-  --sl-color-bg-nav: #0a0f19;
-  --sl-color-bg: #0a0f19;
-  --sl-nav-height: 5rem;
-  --sl-color-text-accent: #fe3d00;
+	--sl-font: 'Inter', sans-serif;
+	--sl-color-accent-low: #421107;
+	--sl-color-accent: #bd2b00;
+	--sl-color-accent-high: #f7b7a7;
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #ebeef4;
+	--sl-color-gray-2: #bec2ca;
+	--sl-color-gray-3: #848c9a;
+	--sl-color-gray-4: #525865;
+	--sl-color-gray-5: #323844;
+	--sl-color-gray-6: #212732;
+	--sl-color-black: #15181d;
+	--sl-color-bg-sidebar: #0a0f19;
+	--sl-color-bg-nav: #0a0f19;
+	--sl-color-bg: #0a0f19;
+	--sl-nav-height: 5rem;
+	--sl-color-text-accent: #fe3d00;
+	--sl-color-text: #fff9;
 }
 
 /* ======= Markdown ========================== */
 
 .sl-markdown-content a:not(:where(.not-content *)) {
-  @apply text-orange;
+	@apply text-orange;
 }
 
 /* Style the Markdown heading links. */
@@ -41,135 +43,135 @@
 /* ======= Top Nav ========================== */
 
 header.header {
-  @apply border-b-[2px] border-b-orange/25;
+	@apply flex items-center border-b-[1px] border-b-orange/25;
 }
 
 /* ======= Search ========================== */
 
 site-search > dialog {
-  @apply bg-blue-900;
+	@apply bg-blue-900;
 }
 
 /* ======= Sidebar ========================== */
 
 #starlight__sidebar {
-  background-color: var(--sl-color-bg);
-  position: fixed;
-  overflow-y: scroll;
-  border-inline-end: none;
+	background-color: var(--sl-color-bg);
+	position: fixed;
+	overflow-y: scroll;
+	border-inline-end: none;
 }
 
-[aria-current="page"],
-[aria-current="page"]:hover,
-[aria-current="page"]:focus {
-  background: none;
-  @apply text-orange hover:text-white;
+[aria-current='page'],
+[aria-current='page']:hover,
+[aria-current='page']:focus {
+	background: none;
+	@apply text-orange hover:text-white;
 }
 
 .right-sidebar {
-  border-inline-start: none;
+	border-inline-start: none;
 }
 
 details#starlight__mobile-toc > div.dropdown {
-  @apply bg-blue-900;
+	@apply bg-blue-900;
 }
 
 div.mobile-preferences {
-  @apply border-none;
+	@apply border-none;
 }
 
 /* ======= Code Blocks ========================== */
 
 .expressive-code {
-  @apply mb-6;
+	@apply mb-6;
 }
 
 .expressive-code .frame pre {
-  @apply !bg-blue-900 rounded-b-md;
+	@apply rounded-b-md !bg-blue-900;
 }
 
 .expressive-code pre {
-  @apply bg-blue-900;
+	@apply bg-blue-900;
 }
 
 .expressive-code .frame.has-title:not(.is-terminal) .title::after {
-  @apply !border-none;
+	@apply !border-none;
 }
 
 .expressive-code .frame.has-title:not(.is-terminal) .header {
-  @apply !bg-none rounded-t-md;
+	@apply rounded-t-md !bg-none;
 }
 
 .expressive-code .frame.has-title:not(.is-terminal) .header .title {
-  @apply bg-blue-900;
+	@apply bg-blue-900;
 }
 
 .expressive-code .frame.has-title:not(.is-terminal) .title {
-  @apply !rounded-t-md;
+	@apply !rounded-t-md;
 }
 
 /* ======= Scrollbar ========================== */
 
 /* For Webkit-based browsers (Chrome, Safari and Opera) */
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 /* For IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 6px;
+	width: 6px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  border-radius: 8px;
+	border-radius: 8px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #2f7dc630;
-  border-radius: 10px;
+	background: #2f7dc630;
+	border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #2f7dc6aa;
+	background: #2f7dc6aa;
 }
 
 /* For Webkit-based browsers (Chrome, Safari and Opera) */
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 /* For IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 6px;
+	width: 6px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  border-radius: 8px;
+	border-radius: 8px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #2f7dc630;
-  border-radius: 10px;
+	background: #2f7dc630;
+	border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #2f7dc6aa;
+	background: #2f7dc6aa;
 }

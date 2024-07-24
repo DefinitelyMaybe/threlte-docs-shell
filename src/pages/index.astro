@@ -1,6 +1,5 @@
 ---
 import type { Props } from '@astrojs/starlight/props'
-import { Card, CardGrid } from '@astrojs/starlight/components'
 import { Image } from 'astro:assets'
 import Layout from '../layouts/LandingPage.astro'
 import logoSrc from '$assets/logo/threlte-logo.png'
@@ -19,25 +18,23 @@ const URLs = {
 ---
 
 <Layout>
-	<header class="flex flex-row items-center justify-between">
+	<header
+		class="fixed left-0 right-0 top-0 z-10 flex h-20 flex-row items-center justify-between bg-[#0a0f19] px-6 [box-shadow:0_25px_50px_12px_rgb(10,15,25)]"
+	>
 		<div class="flex items-center">
-			<Image src={logoSrc} width={222} alt="threlte logo" class="p-4" />
-			<nav>
-				<a href={URLs.docs}>Documentation</a>
-			</nav>
+			<Image src={logoSrc} width={222} alt="threlte logo" />
+			<a href={URLs.docs} class="pl-12 text-[#fff9] no-underline">Documentation</a>
 		</div>
-		<div class="flex gap-4 pr-4">
+		<div class="flex gap-4">
 			<Socials {...Astro.props} />
 		</div>
 	</header>
-	<main class="mx-auto max-w-7xl px-6 pb-12 pt-[10svh]">
+	<main class="mx-auto max-w-7xl px-6 pb-12 pt-20">
 		<!-- <Hero /> -->
 		<div class="flex h-32 items-center justify-center">
-			<div>
-				<a href="/learn/getting-started/intro">Start Building</a>
-				<br />
-				<a href="https://starlight.astro.build">Read the Starlight docs</a>
-			</div>
+			<a href="https://starlight.astro.build" class="text-[#fff9] no-underline"
+				>Read the Starlight docs</a
+			>
 		</div>
 		<div class="flex flex-col gap-14 py-24">
 			<div class="flex flex-col items-center gap-4">
@@ -126,29 +123,16 @@ c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.9,5.2-4.1,9.9-8.6,12.7l-2
 			</div>
 		</div>
 
-		<CardGrid stagger>
-			<Card title="Update content" icon="pencil">
-				Edit `src/content/docs/index.mdx` to see this page change.
-			</Card>
-			<Card title="Add new content" icon="add-document">
-				Add Markdown or MDX files to `src/content/docs` to create new pages.
-			</Card>
-			<Card title="Configure your site" icon="setting">
-				Edit your `sidebar` and other config in `astro.config.mjs`.
-			</Card>
-			<Card title="Read the docs" icon="open-book">
-				Learn more in [the Starlight Docs](https://starlight.astro.build/).
-			</Card>
-		</CardGrid>
-
 		<Testimonials />
 
 		<div class="my-12 flex flex-col items-center justify-center">
-			<a href={URLs.docs} class="orange-button mb-8 glow-orange"> Getting Started </a>
+			<a href={URLs.docs} class="orange-button mb-16 mt-10 glow-orange"> Getting Started </a>
 
-			<h2 class="text-center text-5xl font-bold text-glow-white">Join the Threlte Community.</h2>
+			<h2 class="text-center text-5xl font-bold text-white text-glow-white">
+				Join the Threlte Community.
+			</h2>
 
-			<a class="blue-button mt-8" href={URLs.discord}>
+			<a class="blue-button" href={URLs.discord}>
 				<svg
 					slot="icon-before"
 					class="w-10"
@@ -173,7 +157,7 @@ c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.9,5.2-4.1,9.9-8.6,12.7l-2
 	>
 		<div class="flex flex-col gap-6">
 			<Image src={LogoOnly} alt="threlte logo" width={37} />
-			<p class="my-0 text-[#fff9]">
+			<p class="my-0">
 				Threlte is a 3D framework for Svelte.<br />
 				&copy; 2023
 			</p>
@@ -196,7 +180,7 @@ c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.9,5.2-4.1,9.9-8.6,12.7l-2
 
 		<div class="grid grid-cols-2">
 			<ul class="mt-0 list-none pl-0">
-				<li class="mb-4 font-bold uppercase">Get Started</li>
+				<li class="mb-4 font-bold uppercase text-white">Get Started</li>
 				<li>
 					<a
 						class="block py-2 text-[#fff9] no-underline hover:text-white"
@@ -217,7 +201,7 @@ c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.9,5.2-4.1,9.9-8.6,12.7l-2
 				</li>
 			</ul>
 			<ul class="mt-0 list-none pl-0">
-				<li class="mb-4 font-bold uppercase">Community</li>
+				<li class="mb-4 font-bold uppercase text-white">Community</li>
 				<li>
 					<a
 						href={URLs.twitter}

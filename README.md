@@ -3,15 +3,14 @@
 ## TODO
 
 - Landing Page
-  - socials
   - styling
-  - Fixed Top
 - TopNav
   - PackageNav component
 - Content
   - headings links
 - StackBlitz examples from old docs
-- Fonts
+- transitions
+  - `<body transition:animate="initial">`
 
 ## Notes
 
