@@ -27,6 +27,7 @@ export default defineConfig({
 			},
 			customCss: ['./src/styles/app.css', '@fontsource/inter/400.css'],
 			components: {
+				Head: '$components/Head.astro',
 				Header: '$components/Header.astro',
 				Sidebar: '$components/Sidebar.astro',
 				MobileMenuFooter: '$components/MobileMenuFooter.astro'
