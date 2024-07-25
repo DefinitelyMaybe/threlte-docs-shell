@@ -9,8 +9,6 @@
 - Content
   - headings links
 - StackBlitz example component from old docs
-- transitions
-  - `<body transition:animate="initial">`
 
 ## Notes
 
