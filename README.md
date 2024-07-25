@@ -3,12 +3,12 @@
 ## TODO
 
 - Landing Page
-  - styling
+  - Hero
 - TopNav
   - PackageNav component
 - Content
   - headings links
-- StackBlitz examples from old docs
+- StackBlitz example component from old docs
 - transitions
   - `<body transition:animate="initial">`
 
