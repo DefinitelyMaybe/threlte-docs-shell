@@ -72,6 +72,10 @@ site-search > dialog {
 	border-inline-start: none;
 }
 
+#starlight__on-this-page--mobile > div {
+	@apply bg-blue-900;
+}
+
 details#starlight__mobile-toc > div.dropdown {
 	@apply bg-blue-900;
 }
