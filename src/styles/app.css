@@ -61,13 +61,6 @@ site-search > dialog {
 	border-inline-end: none;
 }
 
-[aria-current='page'],
-[aria-current='page']:hover,
-[aria-current='page']:focus {
-	background: none;
-	@apply text-orange hover:text-white;
-}
-
 .right-sidebar {
 	border-inline-start: none;
 }

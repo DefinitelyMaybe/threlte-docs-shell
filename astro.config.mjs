@@ -61,31 +61,31 @@ export default defineConfig({
 					autogenerate: {
 						directory: 'reference/extras'
 					}
-				},
-				{
-					label: 'GLTF',
-					autogenerate: {
-						directory: 'reference/gltf'
-					}
-				},
-				{
-					label: 'Rapier',
-					autogenerate: {
-						directory: 'reference/rapier'
-					}
-				},
-				{
-					label: 'Theatre',
-					autogenerate: {
-						directory: 'reference/theatre'
-					}
-				},
-				{
-					label: 'Flex',
-					autogenerate: {
-						directory: 'reference/flex'
-					}
 				}
+				// {
+				// 	label: 'GLTF',
+				// 	autogenerate: {
+				// 		directory: 'reference/gltf'
+				// 	}
+				// },
+				// {
+				// 	label: 'Rapier',
+				// 	autogenerate: {
+				// 		directory: 'reference/rapier'
+				// 	}
+				// },
+				// {
+				// 	label: 'Theatre',
+				// 	autogenerate: {
+				// 		directory: 'reference/theatre'
+				// 	}
+				// },
+				// {
+				// 	label: 'Flex',
+				// 	autogenerate: {
+				// 		directory: 'reference/flex'
+				// 	}
+				// }
 			],
 			locales: {
 				root: {
