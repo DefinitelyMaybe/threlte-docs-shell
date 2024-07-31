@@ -13,6 +13,7 @@ export default defineConfig({
 		rehypePlugins: [rehypeHeadingIds, rehypeAutolinkHeadings]
 	},
 	integrations: [
+		svelte(),
 		starlight({
 			title: 'Threlte',
 			logo: {
@@ -105,7 +106,6 @@ export default defineConfig({
 			},
 			plugins: [starlightLinksValidator()]
 		}),
-		svelte(),
 		tailwind({
 			// Disable the default base styles:
 			applyBaseStyles: false
