@@ -6,7 +6,6 @@ import tailwind from '@astrojs/tailwind'
 import { resolve } from 'path'
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import vercel from '@astrojs/vercel/serverless'
 
 // https://astro.build/config
 export default defineConfig({
@@ -119,7 +118,5 @@ export default defineConfig({
 				$assets: resolve('./src/assets')
 			}
 		}
-	},
-	output: 'server',
-	adapter: vercel()
+	}
 })
