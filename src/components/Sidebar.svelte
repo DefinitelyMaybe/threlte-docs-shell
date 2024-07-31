@@ -23,7 +23,7 @@
 	}
 	// TODO-DefinitelyMaybe: check this assumption
 	export let sidebar: Group[]
-	console.log(sidebar)
+	// console.log(sidebar)
 	let current = ''
 
 	// Recursively check if a group of sidebar entries contains the current page

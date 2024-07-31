@@ -24,7 +24,7 @@
 
 	type SidebarEntry = Link | Group
 
-	console.log(sublist)
+	// console.log(sublist)
 </script>
 
 <ul>
