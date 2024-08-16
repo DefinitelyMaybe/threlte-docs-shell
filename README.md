@@ -4,8 +4,6 @@
 
 - Landing Page
   - Hero
-- TopNav
-  - PackageNav component
 - Content
   - headings links
 - StackBlitz example component from old docs

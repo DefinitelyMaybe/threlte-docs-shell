@@ -1,16 +1,6 @@
 <script lang="ts">
+	import { onMount } from 'svelte'
 	import SidebarSubList from './SidebarSublist.svelte'
-
-	// interface Link {
-	// 	type: 'link'
-	// 	label: string
-	// 	href: string
-	// 	isCurrent: boolean
-	// 	// @ts-ignore
-	// 	badge: Badge | undefined
-	// 	// @ts-ignore
-	// 	attrs: LinkHTMLAttributes
-	// }
 
 	interface Group {
 		type: 'group'
@@ -21,25 +11,49 @@
 		// @ts-ignore
 		badge: Badge | undefined
 	}
+
 	// TODO-DefinitelyMaybe: check this assumption
 	export let sidebar: Group[]
-	// console.log(sidebar)
+	export let lang: string
+
+	let location = ''
 	let current = ''
 
-	// Recursively check if a group of sidebar entries contains the current page
-	// const findIfIsCurrent = (entry: (typeof Astro.props.sidebar)[number]): boolean => {
-	// 	if (entry.type === 'link') {
-	// 		return entry.isCurrent
-	// 	}
-	// 	return entry.entries.some((item) => findIfIsCurrent(item))
-	// }
+	const toggleSidebars = () => {
+		if (lang != 'en') {
+			current = window.location.pathname.split('/')[2]
+			if (current == 'reference') {
+				current = window.location.pathname.split('/')[3]
+			}
+		} else {
+			current = window.location.pathname.split('/')[1]
+			if (current == 'reference') {
+				current = window.location.pathname.split('/')[2]
+			}
+		}
+	}
 
-	// const isCurrentPage = findIfIsCurrent(entry)
+	onMount(() => {
+		location = document.location.href
+		const observer = new MutationObserver((mutations) => {
+			if (location !== document.location.href) {
+				location = document.location.href
+				toggleSidebars()
+			}
+		})
+		observer.observe(document.body, { childList: true, subtree: true })
+		toggleSidebars()
+		return () => {
+			observer.disconnect()
+		}
+	})
 </script>
 
 {#each sidebar as newSidebar}
-	<div data-starlight-multi-sidebar-label={newSidebar.label}>
-		<!-- class={current == labelEntry.label ? '' : 'hidden'} -->
+	<div
+		data-starlight-multi-sidebar-label={newSidebar.label}
+		class={current == newSidebar.label.toLocaleLowerCase() ? '' : 'hidden'}
+	>
 		<SidebarSubList sublist={newSidebar.entries} />
 	</div>
 {/each}

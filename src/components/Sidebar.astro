@@ -4,7 +4,7 @@ import MultiSidebar from './Sidebar.svelte'
 import MobileMenuFooter from './MobileMenuFooter.astro'
 ---
 
-<MultiSidebar sidebar={Astro.props.sidebar} client:load />
+<MultiSidebar sidebar={Astro.props.sidebar} lang={Astro.props.lang} client:load />
 <div class="md:sl-hidden">
 	<MobileMenuFooter {...Astro.props} />
 </div>
