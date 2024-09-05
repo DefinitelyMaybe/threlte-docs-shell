@@ -56,7 +56,7 @@
 </script>
 
 <div
-	class="not-prose relative flex w-full flex-col items-stretch overflow-hidden !rounded-b-md border-x border-b border-white/20 transition-all duration-700 ease-in-out will-change-[max-height] md:max-h-[80vh] md:flex-row {!expanded &&
+	class="not-content relative flex w-full flex-col items-stretch overflow-hidden bg-blue-900 !rounded-b-md border-x border-b border-white/20 transition-all duration-700 ease-in-out will-change-[max-height] md:max-h-[80vh] md:flex-row {!expanded &&
 		'!max-h-[100px] overflow-hidden'}"
 >
 	{#if !expanded}
@@ -89,7 +89,6 @@
 	{/if}
 	<CodeExplorer
 		{currentlySelectedFile}
-		class="scrollbar-hide overflow-y-auto border-b border-white/20 px-4 py-3 max-md:flex-shrink-0 md:border-b-0 md:border-r"
 		{filePaths}
 		on:fileSelected={(e) => {
 			onFileSelected(e.detail)
