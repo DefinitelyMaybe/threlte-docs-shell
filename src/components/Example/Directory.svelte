@@ -24,7 +24,11 @@
 </script>
 
 {#if showDirectoryName}
-	<button class:expanded on:click={toggle} class="flex flex-row items-center gap-1 font-bold">
+	<button
+		class:expanded
+		on:click={toggle}
+		class="flex flex-row items-center gap-1 font-bold bg-transparent"
+	>
 		<div class="[&>*]:w-[1em]">
 			{#if expanded}
 				<svg viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,11 +85,11 @@
 {/if}
 
 <ul
-	class="list-none {!expanded && 'hidden'} {showDirectoryName &&
+	class="list-none pl-0 {!expanded && 'hidden'} {showDirectoryName &&
 		'ml-1.5 border-l border-white/20 pl-3'}"
 >
 	{#each sortedFiles as file}
-		<li class="my-1 list-outside pl-0">
+		<li>
 			{#if file.type === 'directory'}
 				<svelte:self directory={file} {currentlySelectedFile} />
 			{:else}
