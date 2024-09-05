@@ -84,3 +84,9 @@
 
 	{file.name}
 </button>
+
+<style>
+	button {
+		background-color: var(--sl-color-bg);
+	}
+</style>
