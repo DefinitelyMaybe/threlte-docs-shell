@@ -14,8 +14,8 @@
 </script>
 
 <button
-	class="flex flex-row items-center gap-1 border border-transparent hover:underline focus:outline-none [&>*]:w-[1em] {isSelected &&
-		'-mx-1 -my-0.5 rounded-sm border-orange/5 bg-orange-800/50 px-1 py-0.5 text-orange'}"
+	class="flex bg-transparent flex-row items-center gap-1 border border-transparent hover:underline focus:outline-none [&>*]:w-[1em] {isSelected &&
+		'text-orange'}"
 	on:click={() => selectFile(file)}
 >
 	{#if fileExtension === 'ts'}
@@ -84,9 +84,3 @@
 
 	{file.name}
 </button>
-
-<style>
-	button {
-		background-color: var(--sl-color-bg);
-	}
-</style>
