@@ -7,7 +7,8 @@
 - Sidebar caret ui
 - Content
   - headings links
-- StackBlitz example component from old docs
+- StackBlitz example
+  - Indentation issue
 
 ## Notes
 
