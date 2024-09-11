@@ -4,16 +4,20 @@ import starlightLinksValidator from 'starlight-links-validator'
 import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
 import { resolve } from 'path'
-import rehypeSlug from 'rehype-slug'
-import { rehypeAutolink } from './plugins/rehype-autolink'
+import { rehypeHeadingIds } from '@astrojs/markdown-remark'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 // https://astro.build/config
 export default defineConfig({
 	markdown: {
 		rehypePlugins: [
-			rehypeSlug,
-			// This adds links to headings
-			...rehypeAutolink()
+			rehypeHeadingIds,
+			[
+				rehypeAutolinkHeadings,
+				{
+					behavior: 'wrap'
+				}
+			]
 		]
 	},
 	integrations: [

@@ -29,19 +29,14 @@
 	@apply text-orange;
 }
 
-div.heading-wrapper {
-	@apply flex items-center gap-4;
-}
-
-/* a.anchor-link {
-	@apply;
-} */
-
 /* Style the Markdown heading links. */
 .sl-markdown-content :is(h1, h2, h3, h4, h5, h6) > a {
 	color: var(--sl-color-white);
 	text-decoration: none;
-	height: 20px;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 /* ======= Top Nav ========================== */
