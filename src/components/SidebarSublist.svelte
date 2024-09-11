@@ -91,9 +91,9 @@
 		color: var(--sl-color-white);
 	}
 
-	.top-level > li + li {
+	/* .top-level > li + li {
 		margin-top: 0.75rem;
-	}
+	} */
 
 	summary {
 		display: flex;
@@ -116,9 +116,9 @@
 	:global([dir='rtl']) .caret {
 		transform: rotateZ(180deg);
 	}
-	[open] > summary .caret {
+	/* [open] > summary .caret {
 		transform: rotateZ(90deg);
-	}
+	} */
 
 	a {
 		display: block;
@@ -147,9 +147,9 @@
 	}
 
 	@media (min-width: 50rem) {
-		.top-level > li + li {
+		/* .top-level > li + li {
 			margin-top: 0.5rem;
-		}
+		} */
 		.large {
 			font-size: var(--sl-text-base);
 		}
