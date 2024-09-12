@@ -42,7 +42,7 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
-					label: 'Learn',
+					label: 'learn',
 					items: [
 						{
 							label: 'Getting Started',
@@ -53,19 +53,19 @@ export default defineConfig({
 					]
 				},
 				{
-					label: 'Examples',
+					label: 'examples',
 					autogenerate: {
 						directory: 'examples'
 					}
 				},
 				{
-					label: 'Core',
+					label: 'core',
 					autogenerate: {
 						directory: 'reference/core'
 					}
 				},
 				{
-					label: 'Extras',
+					label: 'extras',
 					autogenerate: {
 						directory: 'reference/extras'
 					}
