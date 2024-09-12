@@ -71,6 +71,10 @@ multi-sidebar ul > li > a[aria-current='page'] {
 		background-color: transparent;
 		color: var(--sl-color-white);
 	}
+	&:focus {
+		background-color: transparent;
+		color: var(--sl-color-text-accent);
+	}
 }
 
 .right-sidebar {

@@ -10,6 +10,7 @@ export type SidebarData = {
 	labelEntry: Props['sidebar'][number]
 }
 
+const lang = Astro.props.lang
 const multiSidebarData: Array<SidebarData> = Astro.props.sidebar.map((entry) => {
 	if (entry.type !== 'group') {
 		throw new AstroError(
@@ -28,10 +29,10 @@ const multiSidebarData: Array<SidebarData> = Astro.props.sidebar.map((entry) => 
 })
 ---
 
-<multi-sidebar>
+<multi-sidebar lang={lang}>
 	{
 		multiSidebarData.map(({ starlightProps, labelEntry }) => (
-			<div data-starlight-multi-sidebar-label={labelEntry.label}>
+			<div hidden data-starlight-multi-sidebar-label={labelEntry.label}>
 				<Default {...starlightProps} />
 			</div>
 		))
@@ -40,45 +41,55 @@ const multiSidebarData: Array<SidebarData> = Astro.props.sidebar.map((entry) => 
 
 <script>
 	class Sidebar extends HTMLElement {
+		sidebars: NodeListOf<HTMLDivElement>
+		location: string
+		current: string
+		observer: MutationObserver
+		lang: string
 		constructor() {
 			super()
-			console.log('multi-sidebar init')
-			// An array of all the sidebar divs
-			// the url location
-			// toggle class hidden
-			// observe url changes?
+			this.sidebars = this.querySelectorAll('div[data-starlight-multi-sidebar-label]')
+
+			this.location = document.location.href
+			this.current = ''
+			this.lang = this.getAttribute('lang')!
+
+			this.observer = new MutationObserver(() => {
+				if (this.location !== document.location.href) {
+					this.location = document.location.href
+					this.toggleSidebars()
+				}
+			})
+			this.observer.observe(document.body, { childList: true, subtree: true })
+			this.toggleSidebars()
+
+			window.addEventListener('unload', () => {
+				this.observer.disconnect()
+			})
+		}
+		toggleSidebars() {
+			// assign current correctly
+			if (this.lang != 'en') {
+				this.current = window.location.pathname.split('/')[2]
+				if (this.current == 'reference') {
+					this.current = window.location.pathname.split('/')[3]
+				}
+			} else {
+				this.current = window.location.pathname.split('/')[1]
+				if (this.current == 'reference') {
+					this.current = window.location.pathname.split('/')[2]
+				}
+			}
+			// set the divs to hidden unless they're the current
+			for (let i = 0; i < this.sidebars.length; i++) {
+				const element = this.sidebars[i]
+				if (element.getAttribute('data-starlight-multi-sidebar-label') === this.current) {
+					element.removeAttribute('hidden')
+				} else {
+					element.setAttribute('hidden', 'true')
+				}
+			}
 		}
 	}
 	customElements.define('multi-sidebar', Sidebar)
-	// let location = ''
-	// let current = ''
-
-	// const toggleSidebars = () => {
-	// 	if (lang != 'en') {
-	// 		current = window.location.pathname.split('/')[2]
-	// 		if (current == 'reference') {
-	// 			current = window.location.pathname.split('/')[3]
-	// 		}
-	// 	} else {
-	// 		current = window.location.pathname.split('/')[1]
-	// 		if (current == 'reference') {
-	// 			current = window.location.pathname.split('/')[2]
-	// 		}
-	// 	}
-	// }
-
-	// onMount(() => {
-	// 	location = document.location.href
-	// 	const observer = new MutationObserver((mutations) => {
-	// 		if (location !== document.location.href) {
-	// 			location = document.location.href
-	// 			toggleSidebars()
-	// 		}
-	// 	})
-	// 	observer.observe(document.body, { childList: true, subtree: true })
-	// 	toggleSidebars()
-	// 	return () => {
-	// 		observer.disconnect()
-	// 	}
-	// })
 </script>
