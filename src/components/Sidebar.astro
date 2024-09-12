@@ -6,7 +6,6 @@ import Default from '@astrojs/starlight/components/Sidebar.astro'
 // Remix of https://starlight-utils.pages.dev/utilities/multi-sidebar/
 
 export type SidebarData = {
-	isCurrentSidebar: boolean
 	starlightProps: Props
 	labelEntry: Props['sidebar'][number]
 }
@@ -22,32 +21,16 @@ const multiSidebarData: Array<SidebarData> = Astro.props.sidebar.map((entry) => 
 		)
 	}
 
-	// Recursively check if a group of sidebar entries contains the current page
-	const findIfIsCurrent = (entry: (typeof Astro.props.sidebar)[number]): boolean => {
-		if (entry.type === 'link') {
-			return entry.isCurrent
-		}
-		return entry.entries.some((item) => findIfIsCurrent(item))
-	}
-
-	const isCurrentPage = findIfIsCurrent(entry)
-
 	return {
-		isCurrentSidebar: isCurrentPage,
 		starlightProps: { ...Astro.props, sidebar: [...entry.entries] },
 		labelEntry: entry
 	}
 })
-
-// If the current page being built is not on a sidebar then set the first sidebar to be shown
-if (multiSidebarData[0] && !multiSidebarData.some(({ isCurrentSidebar }) => isCurrentSidebar)) {
-	multiSidebarData[0].isCurrentSidebar = true
-}
 ---
 
 <multi-sidebar>
 	{
-		multiSidebarData.map(({ starlightProps, isCurrentSidebar, labelEntry }) => (
+		multiSidebarData.map(({ starlightProps, labelEntry }) => (
 			<div data-starlight-multi-sidebar-label={labelEntry.label}>
 				<Default {...starlightProps} />
 			</div>
