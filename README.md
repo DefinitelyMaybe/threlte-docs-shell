@@ -4,7 +4,6 @@
 
 - Landing Page
   - Hero
-- Sidebar caret ui
 - StackBlitz example
   - Indentation issue
 
