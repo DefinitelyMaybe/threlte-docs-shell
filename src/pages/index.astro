@@ -5,7 +5,7 @@ import Layout from '../layouts/LandingPage.astro'
 import logoSrc from '$assets/logo/threlte-logo.png'
 import LogoOnly from '$assets/logo/threlte-logo-only.png'
 import Hero from '../components/landing-page/Hero/HeroWrapper.svelte'
-import Socials from '../components/SocialIcons.astro'
+import Socials from '@astrojs/starlight/components/SocialIcons.astro'
 import Testimonials from '../components/landing-page/Testimonials/Testimonials.astro'
 import FeatureSection from '../components/landing-page/FeatureSection.astro'
 import { Code } from '@astrojs/starlight/components'
@@ -38,7 +38,7 @@ const URLs = {
 			<Image src={logoSrc} width={222} alt="threlte logo" />
 			<a href={URLs.docs.start} class="pl-12 text-[#fff9] no-underline">Documentation</a>
 		</div>
-		<div class="flex gap-4">
+		<div class="social-icons flex gap-4">
 			<Socials {...Astro.props} />
 		</div>
 	</header>
