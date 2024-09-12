@@ -16,18 +16,7 @@ import RapierExampleRaw from '../components/landing-page/examples/RapierExample.
 import ExtrasExampleRaw from '../components/landing-page/examples/ExtrasExample.txt?raw'
 import PluginsExample from '../components/landing-page/examples/PluginsExample.txt?raw'
 
-const URLs = {
-	docs: {
-		start: '/learn/getting-started/intro',
-		first: '/learn/getting-started/your-first-scene',
-		install: '/learn/getting-started/installation',
-		extras: '/reference/extras/getting-started',
-		plugins: '/learn/advanced/plugins'
-	},
-	github: 'https://github.com/threlte/threlte',
-	twitter: 'https://twitter.com/threlte',
-	discord: 'https://discord.gg/EqUBCfCaGm'
-}
+import { URLs } from '$components/landing-page/URLs.ts'
 ---
 
 <Layout>
@@ -37,6 +26,7 @@ const URLs = {
 		<div class="flex items-center">
 			<Image src={logoSrc} width={222} alt="threlte logo" />
 			<a href={URLs.docs.start} class="pl-12 text-[#fff9] no-underline">Documentation</a>
+			<a href={URLs.services} class="pl-12 text-[#fff9] no-underline">Services</a>
 		</div>
 		<div class="social-icons flex gap-4">
 			<Socials {...Astro.props} />
@@ -386,19 +376,4 @@ c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.9,5.2-4.1,9.9-8.6,12.7l-2
 			</ul>
 		</div>
 	</footer>
-	<style type="postcss">
-		/* This is here because for some reason the deploy wasn't hiding socials text */
-		.sr-only {
-			@apply !hidden;
-		}
-		.blue-button {
-			@apply flex w-fit flex-row gap-3 rounded-md bg-blue px-7 py-4 text-center text-lg text-white no-underline hover:bg-blue-400;
-		}
-		.green-button {
-			@apply flex w-fit flex-row gap-3 rounded-md bg-green px-7 py-4 text-center text-lg text-white no-underline hover:bg-green-400;
-		}
-		.orange-button {
-			@apply flex w-fit flex-row gap-3 rounded-md bg-orange px-7 py-4 text-center text-lg text-white no-underline hover:bg-orange-400;
-		}
-	</style>
 </Layout>
