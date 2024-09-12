@@ -64,6 +64,15 @@ site-search > dialog {
 	border-inline-end: none;
 }
 
+multi-sidebar ul > li > a[aria-current='page'] {
+	color: var(--sl-color-text-accent);
+	background-color: transparent;
+	&:hover {
+		background-color: transparent;
+		color: var(--sl-color-white);
+	}
+}
+
 .right-sidebar {
 	border-inline-start: none;
 }
