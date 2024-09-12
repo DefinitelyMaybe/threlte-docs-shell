@@ -1,7 +1,6 @@
 ---
 import '@pagefind/default-ui/css/ui.css'
 import { Icon } from '@astrojs/starlight/components'
-// import Icon from '@astrojs/starlight/user-components/Icon.astro';
 import project from 'virtual:starlight/project-context'
 import type { Props } from '@astrojs/starlight/props'
 
@@ -11,6 +10,7 @@ const pagefindTranslations = {
 	placeholder: labels['search.label'],
 	...Object.fromEntries(
 		Object.entries(labels)
+			// @ts-ignore
 			.filter(([key]) => key.startsWith('pagefind.'))
 			.map(([key, value]) => [key.replace('pagefind.', ''), value])
 	)
