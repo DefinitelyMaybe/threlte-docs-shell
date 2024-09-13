@@ -23,9 +23,44 @@
 	--sl-color-text: #fff9;
 }
 
-/* This is here because for some reason the deploy wasn't hiding socials text */
+/* This is here because for some reason the deploy wasn't hiding socials text on landing page. Docs was fine tho 🤷 */
 .sr-only {
 	@apply !hidden;
+}
+/* This is maddening. orange is working fine but blue and green are not. hacky fix. */
+.bg-blue {
+	@apply !bg-blue;
+}
+.bg-green {
+	@apply !bg-green;
+}
+.glow-blue {
+	@apply !glow-blue;
+}
+.glow-green {
+	@apply !glow-green;
+}
+
+/* ======= Buttons ========================== */
+.blue-button {
+	@apply flex w-fit flex-row gap-3 rounded-md bg-blue px-7 py-4 text-center text-lg text-white no-underline hover:bg-blue-400;
+}
+.green-button {
+	@apply flex w-fit flex-row gap-3 rounded-md bg-green px-7 py-4 text-center text-lg text-white no-underline hover:bg-green-400;
+}
+.orange-button {
+	@apply flex w-fit flex-row gap-3 rounded-md bg-orange px-7 py-4 text-center text-lg text-white no-underline hover:bg-orange-400;
+}
+
+/* Glows */
+.glow-orange {
+	background-image: radial-gradient(closest-side, rgba(255, 146, 112, 0.1) 0%, transparent 100%);
+}
+.glow-blue {
+	background-image: radial-gradient(closest-side, rgba(123, 175, 224, 0.12) 0%, transparent 100%);
+}
+.glow-green {
+	background-image: radial-gradient(closest-side, rgba(135, 230, 151, 0.12) 0%, transparent 100%);
 }
 
 /* ======= Markdown ========================== */
@@ -126,18 +161,6 @@ div.mobile-preferences {
 
 .expressive-code .frame.has-title:not(.is-terminal) .title {
 	@apply !rounded-t-md;
-}
-
-/* ======= Buttons ========================== */
-
-.blue-button {
-	@apply flex w-fit flex-row gap-3 rounded-md bg-blue px-7 py-4 text-center text-lg text-white no-underline hover:bg-blue-400;
-}
-.green-button {
-	@apply flex w-fit flex-row gap-3 rounded-md bg-green px-7 py-4 text-center text-lg text-white no-underline hover:bg-green-400;
-}
-.orange-button {
-	@apply flex w-fit flex-row gap-3 rounded-md bg-orange px-7 py-4 text-center text-lg text-white no-underline hover:bg-orange-400;
 }
 
 /* ======= Scrollbar ========================== */
