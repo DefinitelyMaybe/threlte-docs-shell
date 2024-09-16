@@ -1,34 +1,33 @@
 <script lang="ts">
-  import { useThrelte } from '@threlte/core'
-  import { transitions, useGltf, useTexture } from '@threlte/extras'
-  import { Theatre } from '@threlte/theatre'
-  import { EquirectangularReflectionMapping, SRGBColorSpace } from 'three'
-  import Scene from './Scene.svelte'
-  import { cubeGeometry } from './state'
-  import state from './state.json'
+	import { useThrelte } from '@threlte/core'
+	import { transitions, useGltf, useTexture } from '@threlte/extras'
+	import { EquirectangularReflectionMapping, SRGBColorSpace } from 'three'
+	import Scene from './Scene.svelte'
+	import { cubeGeometry } from './state'
+	import type * as THREE from 'three'
 
-  type CubeGltf = {
-    nodes: {
-      Cube: THREE.Mesh
-    }
-    materials: {}
-  }
-  const cube = useGltf<CubeGltf>('/cube.glb')
+	type CubeGltf = {
+		nodes: {
+			Cube: THREE.Mesh
+		}
+		materials: {}
+	}
+	const cube = useGltf<CubeGltf>('models/cube.glb')
 
-  $: if ($cube) cubeGeometry.set($cube.nodes.Cube.geometry)
+	$: if ($cube) cubeGeometry.set($cube.nodes.Cube.geometry)
 
-  const env = useTexture('/oil-on-water.png')
+	const env = useTexture('textures/oil-on-water.png')
 
-  const { scene } = useThrelte()
-  $: if ($env) {
-    $env.mapping = EquirectangularReflectionMapping
-    $env.colorSpace = SRGBColorSpace
-    scene.environment = $env
-  }
+	const { scene } = useThrelte()
+	$: if ($env) {
+		$env.mapping = EquirectangularReflectionMapping
+		$env.colorSpace = SRGBColorSpace
+		scene.environment = $env
+	}
 
-  transitions()
+	transitions()
 </script>
 
 {#if $cubeGeometry && $env}
-  <Scene />
+	<Scene />
 {/if}

@@ -39,5 +39,8 @@
     "tailwindcss": "^3.4.4",
     "three": "^0.168.0",
     "typescript": "^5.5.2"
+  },
+  "devDependencies": {
+    "@types/animejs": "^3.1.12"
   }
 }

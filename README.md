@@ -2,8 +2,7 @@
 
 ## TODO
 
-- Landing Page
-  - Hero
+- Landing Page (dark cube thingy)
 - StackBlitz example
   - Indentation issue
 
