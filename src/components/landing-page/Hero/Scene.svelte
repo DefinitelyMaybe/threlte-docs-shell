@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { types } from '@theatre/core'
 	import type { ISheet } from '@theatre/core'
 	import { T, useThrelte } from '@threlte/core'
 	import { Float, Grid, OrbitControls, Portal, useTexture } from '@threlte/extras'
@@ -115,20 +114,11 @@
 					<SheetObject
 						key="Composite"
 						let:Transform
-						let:Sync
 						props={{
-							floatIntensity: types.number(1, {
-								range: [0, 10]
-							}),
-							rotationIntensity: types.number(1, {
-								range: [0, 10]
-							}),
-							rotationSpeed: types.number(1, {
-								range: [0, 10]
-							}),
-							floatSpeed: types.number(1, {
-								range: [0, 10]
-							})
+							floatIntensity: 1,
+							rotationIntensity: 1,
+							rotationSpeed: 1,
+							floatSpeed: 1
 						}}
 						let:values
 					>
