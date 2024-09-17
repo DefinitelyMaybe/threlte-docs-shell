@@ -2,9 +2,10 @@
 
 ## TODO
 
-- Landing Page (dark cube thingy)
-- StackBlitz example
-  - Indentation issue
+- Landing Page
+  - @Theatre/core type import issue
+  - (dark cube thingy)
+- Content when ready
 
 ## Notes
 
