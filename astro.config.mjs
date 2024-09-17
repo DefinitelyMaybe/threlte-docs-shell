@@ -125,12 +125,6 @@ export default defineConfig({
 				$components: resolve('./src/components'),
 				$assets: resolve('./src/assets')
 			}
-		},
-		legacy: {
-			// vite 5 changed how externalized modules work - need to use this flag to keep old behaviour
-			// https://vitejs.dev/guide/migration#ssr-externalized-modules-value-now-matches-production
-			// currently only needed for src/components/landing-page/Hero
-			proxySsrExternalModules: true
 		}
 	}
 })
