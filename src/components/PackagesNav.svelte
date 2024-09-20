@@ -18,6 +18,7 @@
 <div class="flex flex-row items-center">
 	<select
 		class="mr-4 flex shrink rounded-md border border-[var(--sl-color-gray-5)] bg-blue-900 px-3 py-2 text-[var(--sl-color-text)] hover:text-white"
+		aria-label="Packages and Docs Navigation"
 		bind:value={url}
 		on:change={() => {
 			link.click()
@@ -27,5 +28,5 @@
 			<option value={href}>{label}</option>
 		{/each}
 	</select>
-	<a href={url} bind:this={link} class="hidden"> </a>
+	<a href={url} bind:this={link} class="hidden" aria-hidden="true"> </a>
 </div>

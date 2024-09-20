@@ -16,7 +16,6 @@
 				end: number
 		  }
 		| undefined = undefined
-
 	export { _in as in, _out as out }
 
 	let timeline: anime.AnimeTimelineInstance | undefined
