@@ -55,7 +55,7 @@
 
 		<FadeOut progress={$springScrollPos} from={0} to={0.2}>
 			<div
-				class="will-change-auto"
+				class="will-change-auto flex flex-col"
 				use:sheetObject={{
 					key: 'scroll',
 					callback(node, props) {
