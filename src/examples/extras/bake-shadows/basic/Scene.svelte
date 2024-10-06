@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { BakeShadows } from '@threlte/extras'
+  // import { BakeShadows } from '@threlte/extras'
   import { T, useTask } from '@threlte/core'
 
   type Props = {
@@ -44,6 +44,6 @@
   <T.MeshStandardMaterial color="white" />
 </T.Mesh>
 
-{#if bake}
+<!-- {#if bake}
   <BakeShadows />
-{/if}
+{/if} -->

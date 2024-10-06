@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Detailed } from '@threlte/extras'
+  // import { Detailed } from '@threlte/extras'
   import { IcosahedronGeometry } from 'three'
   import { T, useTask } from '@threlte/core'
 
@@ -27,7 +27,7 @@
   position.z={18}
 />
 
-<Detailed position.z={z}>
+<!-- <Detailed position.z={z}>
   {#each items as { color, distance }, i}
     {@const detail = items.length - i - 1}
     <T.Mesh
@@ -37,4 +37,4 @@
       material.color={color}
     />
   {/each}
-</Detailed>
+</Detailed> -->
