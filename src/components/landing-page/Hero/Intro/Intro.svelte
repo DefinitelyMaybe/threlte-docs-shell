@@ -1,10 +1,11 @@
 <script lang="ts">
-	import { Sequence, createSheetObjectAction } from '@threlte/theatre'
-	import FadeOut from '../FadeOut.svelte'
-	import { springScrollPos } from '../scrollPos'
-	import TheatreTextBox from './TheatreTextBox.svelte'
+import { Sequence, createSheetObjectAction } from '@threlte/theatre'
+import FadeOut from '../FadeOut.svelte'
+import { springScrollPos } from '../scrollPos'
+import TheatreTextBox from './TheatreTextBox.svelte'
+import { URLs } from '../../../URLs'
 
-	const sheetObject = createSheetObjectAction()
+const sheetObject = createSheetObjectAction()
 </script>
 
 <Sequence autoplay />
@@ -33,7 +34,7 @@
 									node.style.transform = `scaleX(${props.scaleX})`
 								}
 							}}
-							class="absolute bottom-0 left-0 -z-10 h-4 w-full origin-left bg-orange will-change-transform"
+							class="bg-orange absolute bottom-0 left-0 -z-10 h-4 w-full origin-left will-change-transform"
 						></div>
 						3D apps
 					</span> for the web.
@@ -44,18 +45,16 @@
 		<TheatreTextBox key="start-building">
 			<div class="flex flex-col-reverse items-center justify-center gap-6 md:flex-row md:gap-3">
 				<code class="px-7 py-4 text-[1em] text-sm md:text-base">
-					<span class="mr-2 select-none font-bold text-orange">{'>'}</span>npm create threlte
+					<span class="text-orange mr-2 select-none font-bold">{'>'}</span>npm create threlte
 				</code>
 
-				<a href="/docs/learn/getting-started/introduction" class="orange-button">
-					Start Building →
-				</a>
+				<a href={URLs.docs.start} class="orange-button"> Start Building → </a>
 			</div>
 		</TheatreTextBox>
 
 		<FadeOut progress={$springScrollPos} from={0} to={0.2}>
 			<div
-				class="will-change-auto flex flex-col"
+				class="flex flex-col will-change-auto"
 				use:sheetObject={{
 					key: 'scroll',
 					callback(node, props) {
@@ -112,18 +111,18 @@
 </FadeOut>
 
 <style>
-	@keyframes custom-pulse {
-		50% {
-			opacity: 0;
-		}
+@keyframes custom-pulse {
+	50% {
+		opacity: 0;
 	}
-	.pulse-1 {
-		animation: custom-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-	}
-	.pulse-2 {
-		animation: custom-pulse 2s 0.3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-	}
-	.pulse-3 {
-		animation: custom-pulse 2s 0.6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-	}
+}
+.pulse-1 {
+	animation: custom-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.pulse-2 {
+	animation: custom-pulse 2s 0.3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.pulse-3 {
+	animation: custom-pulse 2s 0.6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
 </style>

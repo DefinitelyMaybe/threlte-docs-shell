@@ -7,6 +7,11 @@ import { resolve } from 'path'
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
+const noExternal = ['three', 'troika-three-text', 'postprocessing', '@pmndrs/vanilla']
+if (process.env.NODE_ENV === 'production') {
+	noExternal.push('@theatre/core')
+}
+
 // https://astro.build/config
 export default defineConfig({
 	markdown: {
@@ -33,12 +38,13 @@ export default defineConfig({
 				twitter: 'https://twitter.com/threlte',
 				discord: 'https://discord.gg/EqUBCfCaGm'
 			},
-			customCss: ['./src/styles/app.css', '@fontsource/inter/400.css'],
+			customCss: ['src/styles/app.css', '@fontsource/inter/400.css'],
 			components: {
 				Head: '$components/Head.astro',
 				Header: '$components/Header.astro',
 				Sidebar: '$components/Sidebar.astro',
-				MobileMenuFooter: '$components/MobileMenuFooter.astro'
+				MobileMenuFooter: '$components/MobileMenuFooter.astro',
+				MarkdownContent: '$components/MarkdownContent.astro'
 			},
 			sidebar: [
 				{
@@ -48,6 +54,24 @@ export default defineConfig({
 							label: 'Getting Started',
 							autogenerate: {
 								directory: 'learn/getting-started'
+							}
+						},
+						{
+							label: 'Basics',
+							autogenerate: {
+								directory: 'learn/basics'
+							}
+						},
+						{
+							label: 'Advanced',
+							autogenerate: {
+								directory: 'learn/advanced'
+							}
+						},
+						{
+							label: 'More',
+							autogenerate: {
+								directory: 'learn/more'
 							}
 						}
 					]
@@ -60,49 +84,250 @@ export default defineConfig({
 				},
 				{
 					label: 'core',
-					autogenerate: {
-						directory: 'reference/core'
-					}
+					items: [
+						{
+							label: 'Getting Started',
+							link: 'reference/core/getting-started'
+						},
+						{
+							label: 'Components',
+							autogenerate: {
+								directory: 'reference/core/components'
+							}
+						},
+						{
+							label: 'Hooks',
+							autogenerate: {
+								directory: 'reference/core/hooks'
+							}
+						},
+						{
+							label: 'Helpers',
+							autogenerate: {
+								directory: 'reference/core/helpers'
+							}
+						}
+					]
 				},
 				{
 					label: 'extras',
+					items: [
+						{
+							label: 'Getting Started',
+							link: 'reference/extras/getting-started'
+						},
+						{
+							label: 'Audio',
+							autogenerate: {
+								directory: 'reference/extras/audio'
+							}
+						},
+						{
+							label: 'Content',
+							autogenerate: {
+								directory: 'reference/extras/content'
+							}
+						},
+						{
+							label: 'Interaction',
+							autogenerate: {
+								directory: 'reference/extras/interaction'
+							}
+						},
+						{
+							label: 'Loading',
+							autogenerate: {
+								directory: 'reference/extras/loading'
+							}
+						},
+						{
+							label: 'Performance',
+							autogenerate: {
+								directory: 'reference/extras/performance'
+							}
+						},
+						{
+							label: 'Staging',
+							autogenerate: {
+								directory: 'reference/extras/staging'
+							}
+						},
+						{
+							label: 'Visual Effects',
+							autogenerate: {
+								directory: 'reference/extras/vfx'
+							}
+						},
+						{
+							label: 'Misc',
+							autogenerate: {
+								directory: 'reference/extras/misc'
+							}
+						}
+					]
+				},
+				{
+					label: 'gltf',
 					autogenerate: {
-						directory: 'reference/extras'
+						directory: 'reference/gltf'
 					}
+				},
+				{
+					label: 'rapier',
+					items: [
+						{
+							label: 'Getting Started',
+							link: 'reference/rapier/getting-started'
+						},
+						{
+							label: 'Concepts',
+							autogenerate: {
+								directory: 'reference/rapier/concepts'
+							}
+						},
+						{
+							label: 'Components',
+							autogenerate: {
+								directory: 'reference/rapier/components'
+							}
+						},
+						{
+							label: 'Hooks',
+							autogenerate: {
+								directory: 'reference/rapier/hooks'
+							}
+						},
+						{
+							label: 'Joints',
+							autogenerate: {
+								directory: 'reference/rapier/joints'
+							}
+						}
+					]
+				},
+				{
+					label: 'theatre',
+					items: [
+						{
+							label: 'Getting Started',
+							link: 'reference/theatre/getting-started'
+						},
+						{
+							label: 'Components',
+							autogenerate: {
+								directory: 'reference/theatre/components'
+							}
+						},
+						{
+							label: 'Sheet Object',
+							autogenerate: {
+								directory: 'reference/theatre/sheet-object'
+							}
+						},
+						{
+							label: 'Hooks',
+							autogenerate: {
+								directory: 'reference/theatre/hooks'
+							}
+						},
+						{
+							label: 'Actions',
+							autogenerate: {
+								directory: 'reference/theatre/actions'
+							}
+						}
+					]
+				},
+				{
+					label: 'flex',
+					items: [
+						{
+							label: 'Getting Started',
+							link: 'reference/flex/getting-started'
+						},
+						{
+							label: 'Examples',
+							link: 'reference/flex/examples'
+						},
+						{
+							label: 'Components',
+							autogenerate: {
+								directory: 'reference/flex/components'
+							}
+						},
+						{
+							label: 'Utilities',
+							autogenerate: {
+								directory: 'reference/flex/utilities'
+							}
+						},
+						{
+							label: 'Hooks',
+							autogenerate: {
+								directory: 'reference/flex/hooks'
+							}
+						}
+					]
+				},
+				{
+					label: 'xr',
+					items: [
+						{
+							label: 'Getting Started',
+							link: 'reference/xr/getting-started'
+						},
+						{
+							label: 'Components',
+							autogenerate: {
+								directory: 'reference/xr/components'
+							}
+						},
+						{
+							label: 'Controls',
+							autogenerate: {
+								directory: 'reference/xr/controls'
+							}
+						},
+						{
+							label: 'Hooks',
+							autogenerate: {
+								directory: 'reference/xr/hooks'
+							}
+						}
+					]
+				},
+				{
+					label: 'studio',
+					items: [
+						{
+							label: 'Getting Started',
+							autogenerate: {
+								directory: 'reference/studio/getting-started'
+							}
+						},
+						{
+							label: 'Components',
+							autogenerate: {
+								directory: 'reference/studio/components'
+							}
+						},
+						{
+							label: 'Extensions',
+							autogenerate: {
+								directory: 'reference/studio/extensions'
+							}
+						}
+					]
 				}
-				// {
-				// 	label: 'GLTF',
-				// 	autogenerate: {
-				// 		directory: 'reference/gltf'
-				// 	}
-				// },
-				// {
-				// 	label: 'Rapier',
-				// 	autogenerate: {
-				// 		directory: 'reference/rapier'
-				// 	}
-				// },
-				// {
-				// 	label: 'Theatre',
-				// 	autogenerate: {
-				// 		directory: 'reference/theatre'
-				// 	}
-				// },
-				// {
-				// 	label: 'Flex',
-				// 	autogenerate: {
-				// 		directory: 'reference/flex'
-				// 	}
-				// }
 			],
 			locales: {
 				root: {
 					lang: 'en',
 					label: 'English'
 				},
-				'zh-cn': {
-					label: '简体中文',
-					lang: 'zh-CN'
+				de: {
+					label: 'German',
+					lang: 'de'
 				}
 			},
 			editLink: {
@@ -119,12 +344,30 @@ export default defineConfig({
 			applyBaseStyles: false
 		})
 	],
+	site: 'https://threlte.xyz',
 	vite: {
 		resolve: {
 			alias: {
 				$components: resolve('./src/components'),
 				$assets: resolve('./src/assets')
 			}
+		},
+		ssr: {
+			// "@theatre/core" needs to be externalized in development mode but not in production!
+			noExternal: noExternal
+		},
+		// Use https and generate a cert to allow XR debugging.
+		server: {
+			https: process.argv.includes('--https')
+		},
+		plugins: process.argv.includes('--https') ? [mkcert()] : [],
+		optimizeDeps: {
+			esbuildOptions: {
+				target: 'esnext'
+			}
+		},
+		build: {
+			target: 'esnext'
 		}
 	}
 })

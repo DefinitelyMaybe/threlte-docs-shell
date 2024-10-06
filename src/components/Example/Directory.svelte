@@ -1,33 +1,34 @@
 <script lang="ts">
-	import type { Writable } from 'svelte/store'
-	import FileComponent from './File.svelte'
-	import type { Directory, File } from './types'
+import type { Writable } from 'svelte/store'
+import Dir from './Directory.svelte'
+import FileComponent from './File.svelte'
+import type { Directory, File } from './types'
 
-	export let directory: Directory
-	export let showDirectoryName = true
-	export let expanded = true
-	export let currentlySelectedFile: Writable<File>
+export let directory: Directory
+export let showDirectoryName = true
+export let expanded = true
+export let currentlySelectedFile: Writable<File>
 
-	function toggle() {
-		expanded = !expanded
+function toggle() {
+	expanded = !expanded
+}
+
+const sortedFiles = directory.files.sort((a, b) => {
+	if (a.type === 'directory' && b.type === 'file') {
+		return -1
+	} else if (a.type === 'file' && b.type === 'directory') {
+		return 1
+	} else {
+		return a.name.localeCompare(b.name)
 	}
-
-	const sortedFiles = directory.files.sort((a, b) => {
-		if (a.type === 'directory' && b.type === 'file') {
-			return -1
-		} else if (a.type === 'file' && b.type === 'directory') {
-			return 1
-		} else {
-			return a.name.localeCompare(b.name)
-		}
-	})
+})
 </script>
 
 {#if showDirectoryName}
 	<button
-		class:expanded
+		class:expanded={expanded}
 		on:click={toggle}
-		class="flex flex-row items-center gap-1 font-bold bg-transparent"
+		class="flex flex-row items-center gap-1 bg-transparent font-bold"
 	>
 		<div class="[&>*]:w-[1em]">
 			{#if expanded}
@@ -91,9 +92,9 @@
 	{#each sortedFiles as file}
 		<li>
 			{#if file.type === 'directory'}
-				<svelte:self directory={file} {currentlySelectedFile} />
+				<Dir directory={file} currentlySelectedFile={currentlySelectedFile} />
 			{:else}
-				<FileComponent {file} {currentlySelectedFile} />
+				<FileComponent file={file} currentlySelectedFile={currentlySelectedFile} />
 			{/if}
 		</li>
 	{/each}

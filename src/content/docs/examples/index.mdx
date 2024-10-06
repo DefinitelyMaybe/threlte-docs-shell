@@ -1,43 +1,16 @@
 ---
-title: Index
-description: A guide in my new Starlight docs site.
+title: Overview
 ---
 
-import Example from '$components/Example/Example.astro'
+There are a ton of different challenges and things to consider when creating a 3D project.
+Here you will find recipes and inspiration to get started with Threlte.
 
-<Example path="extras/example" />
-
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
-
-## Further reading
-
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
-
-```svelte
-<script lang="ts">
-	import { Canvas } from '@threlte/core'
-	import Scene from './Scene.svelte'
-	import { Pane, Checkbox } from 'svelte-tweakpane-ui'
-
-	let showScene = true
-</script>
-
-<Pane title="" position="fixed">
-	<Checkbox bind:value={showScene} />
-</Pane>
-
-<div>
-	<Canvas>
-		{#if showScene}
-			<Scene />
-		{/if}
-	</Canvas>
-</div>
-
-<style>
-	div {
-		height: 100%;
-	}
-</style>
-```
+:::note[Help Wanted]
+We'd love your help to make, add to and edit the examples. There lots of examples from
+[three.js](https://threejs.org/examples/#webgl_animation_keyframes) and
+[r3f](https://docs.pmnd.rs/react-three-fiber/getting-started/examples) that could serve as
+inspiration. Read through the [contributing
+guide](https://github.com/threlte/threlte/blob/main/CONTRIBUTING.md) and [Examples
+README](https://github.com/threlte/threlte/blob/main/apps/docs/src/examples/README.md) to get
+started.
+:::
