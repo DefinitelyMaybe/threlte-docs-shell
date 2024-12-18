@@ -33,7 +33,7 @@
 		"@threlte/xr": "1.0.0-next.7",
 		"@types/three": "^0.169.0",
 		"animejs": "^3.2.2",
-		"astro": "^4.15.8",
+		"astro": "^4.16.17",
 		"astro-vtbot": "^1.8.2",
 		"camera-controls": "^2.9.0",
 		"postprocessing": "^6.36.2",
