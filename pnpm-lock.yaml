@@ -22,7 +22,7 @@ importers:
         version: 2.0.3(@astrojs/starlight@0.28.2(astro@4.16.17(@types/node@20.16.10)(rollup@4.21.2)(sass@1.79.4)(typescript@5.5.2)))(@astrojs/tailwind@5.1.1(astro@4.16.17(@types/node@20.16.10)(rollup@4.21.2)(sass@1.79.4)(typescript@5.5.2))(tailwindcss@3.4.4))(tailwindcss@3.4.4)
       '@astrojs/svelte':
         specifier: ^5.7.1
-        version: 5.7.1(astro@4.16.17(@types/node@20.16.10)(rollup@4.21.2)(sass@1.79.4)(typescript@5.5.2))(svelte@5.0.0-next.257)(typescript@5.5.2)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))
+        version: 5.7.1(astro@4.16.17(@types/node@20.16.10)(rollup@4.21.2)(sass@1.79.4)(typescript@5.5.2))(svelte@5.19.5)(typescript@5.5.2)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))
       '@astrojs/tailwind':
         specifier: ^5.1.1
         version: 5.1.1(astro@4.16.17(@types/node@20.16.10)(rollup@4.21.2)(sass@1.79.4)(typescript@5.5.2))(tailwindcss@3.4.4)
@@ -51,26 +51,26 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2
       '@threlte/core':
-        specifier: 8.0.0-next.17
-        version: 8.0.0-next.17(svelte@5.0.0-next.257)(three@0.169.0)
+        specifier: ^8.0.1
+        version: 8.0.1(svelte@5.19.5)(three@0.169.0)
       '@threlte/extras':
-        specifier: 9.0.0-next.23
-        version: 9.0.0-next.23(@types/three@0.169.0)(svelte@5.0.0-next.257)(three@0.169.0)
+        specifier: ^9.0.1
+        version: 9.0.1(@types/three@0.169.0)(svelte@5.19.5)(three@0.169.0)
       '@threlte/flex':
-        specifier: 2.0.0-next.7
-        version: 2.0.0-next.7(svelte@5.0.0-next.257)(three@0.169.0)
+        specifier: ^2.0.0
+        version: 2.0.0(svelte@5.19.5)(three@0.169.0)
       '@threlte/rapier':
-        specifier: 3.0.0-next.10
-        version: 3.0.0-next.10(@dimforge/rapier3d-compat@0.14.0)(svelte@5.0.0-next.257)(three@0.169.0)
+        specifier: ^3.0.0
+        version: 3.0.0(@dimforge/rapier3d-compat@0.14.0)(svelte@5.19.5)(three@0.169.0)
       '@threlte/studio':
-        specifier: 0.0.1-next.1
-        version: 0.0.1-next.1(svelte@5.0.0-next.257)(three@0.169.0)
+        specifier: ^0.1.3
+        version: 0.1.3(svelte@5.19.5)(three@0.169.0)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))
       '@threlte/theatre':
-        specifier: 3.0.0-next.4
-        version: 3.0.0-next.4(@theatre/core@0.6.2)(@theatre/studio@0.7.2(@theatre/core@0.6.2))(@threlte/core@8.0.0-next.17(svelte@5.0.0-next.257)(three@0.169.0))(@threlte/extras@9.0.0-next.23(@types/three@0.169.0)(svelte@5.0.0-next.257)(three@0.169.0))(svelte@5.0.0-next.257)(three@0.169.0)
+        specifier: ^3.0.0
+        version: 3.0.0(@theatre/core@0.6.2)(@theatre/studio@0.7.2(@theatre/core@0.6.2))(@threlte/core@8.0.1(svelte@5.19.5)(three@0.169.0))(@threlte/extras@9.0.1(@types/three@0.169.0)(svelte@5.19.5)(three@0.169.0))(svelte@5.19.5)(three@0.169.0)
       '@threlte/xr':
-        specifier: 1.0.0-next.7
-        version: 1.0.0-next.7(svelte@5.0.0-next.257)(three@0.169.0)
+        specifier: ^1.0.0
+        version: 1.0.0(svelte@5.19.5)(three@0.169.0)
       '@types/three':
         specifier: ^0.169.0
         version: 0.169.0
@@ -103,7 +103,7 @@ importers:
         version: 7.1.0
       runed:
         specifier: ^0.15.2
-        version: 0.15.3(svelte@5.0.0-next.257)
+        version: 0.15.3(svelte@5.19.5)
       sharp:
         specifier: ^0.33.4
         version: 0.33.4
@@ -117,14 +117,14 @@ importers:
         specifier: ^0.9.0
         version: 0.9.0(@astrojs/starlight@0.28.2(astro@4.16.17(@types/node@20.16.10)(rollup@4.21.2)(sass@1.79.4)(typescript@5.5.2)))(astro@4.16.17(@types/node@20.16.10)(rollup@4.21.2)(sass@1.79.4)(typescript@5.5.2))
       svelte:
-        specifier: 5.0.0-next.257
-        version: 5.0.0-next.257
+        specifier: ^5.19.5
+        version: 5.19.5
       svelte-portal:
         specifier: ^2.2.1
         version: 2.2.1
       svelte-tweakpane-ui:
         specifier: ^1.3.0
-        version: 1.3.0(svelte@5.0.0-next.257)
+        version: 1.3.0(svelte@5.19.5)
       tailwindcss:
         specifier: ^3.4.4
         version: 3.4.4
@@ -957,44 +957,45 @@ packages:
     peerDependencies:
       '@theatre/core': '*'
 
-  '@threejs-kit/instanced-sprite-mesh@2.4.7':
-    resolution: {integrity: sha512-31erNfFEF+msFyWH46sIbjaACXqBke/8qMr/xhv9E3INPCLTrLuN4C4W93znnyTiyuCQ3Waf5UOCT18OBWTUtw==}
+  '@threejs-kit/instanced-sprite-mesh@2.5.0':
+    resolution: {integrity: sha512-W4cRK7f1o15GtacvLi8h1022ySiMM5218eZJQYWHbVGKqpRezmj8hscdzgp4JFSCkRoAIdyIdLZg5U0Mtmcu/w==}
     peerDependencies:
-      three: '>=0.151.0'
+      three: '>=0.170.0'
 
-  '@threlte/core@8.0.0-next.17':
-    resolution: {integrity: sha512-O/R5YUCsM+OrcsGZYE0amurWNn1al29OjLtqUnLfMaEhrfPSlQQwHBCat2iDOXj0beJWJ36VmiuORWEvx2A6cQ==}
-    peerDependencies:
-      svelte: '>=5'
-      three: '>=0.155'
-
-  '@threlte/extras@9.0.0-next.23':
-    resolution: {integrity: sha512-a8++O1I0agheWlauGMuulE0bdDLD9sFJsP/WOY0DSp4PNCzZtSqL5ijeW3LGB9tP1kn1Dy/PALzN+KyAl4exKQ==}
+  '@threlte/core@8.0.1':
+    resolution: {integrity: sha512-vy1xRQppJFNmfPTeiRQue+KmYFsbPgVhwuYXRTvVrwPeD2oYz43gxUeOpe1FACeGKxrxZykeKJF5ebVvl7gBxw==}
     peerDependencies:
       svelte: '>=5'
       three: '>=0.155'
 
-  '@threlte/flex@2.0.0-next.7':
-    resolution: {integrity: sha512-PP0/w5eY/CJ4J7IgLn1SQcCBsPwbq4mi3FR0PL7vguFRCUwYMjzSE+N2o7Qf8w3N8mV8j/W82c+N4ZtotPp7xQ==}
+  '@threlte/extras@9.0.1':
+    resolution: {integrity: sha512-xI0s5a/9NdBbUSaYCnTHfnVl44kZQUTuTPfzwv4gmMM2r2HewM5QsMDBBwBTcuVcYqkM9aUKl+5MWa20LnH/mg==}
     peerDependencies:
       svelte: '>=5'
       three: '>=0.155'
 
-  '@threlte/rapier@3.0.0-next.10':
-    resolution: {integrity: sha512-8NrM8/+ZC1nkahTFk32qDeWuDa2fMXOFq2DykRHnvt+2GqNeDOTGTgawAz2+w6k0VKk2jHCgcRyv5/AZSyrgxQ==}
+  '@threlte/flex@2.0.0':
+    resolution: {integrity: sha512-MoHdUxU+xmjuLieGxMfMECKwoFHZHB+0/84CWfqCFNp5eCV0UyOqEJkRBOTJ1hHPB+thC7uJmZ/UVePAqujwqA==}
+    peerDependencies:
+      svelte: '>=5'
+      three: '>=0.155'
+
+  '@threlte/rapier@3.0.0':
+    resolution: {integrity: sha512-6MQ/zKKM4d/GCKF+D5/J61/HlihMkQNTa7GGEB1muSjrySdzjI/6QHPxxbdl2B3BJsN+Tg7nQY9AQRV1YPZu0g==}
     peerDependencies:
       '@dimforge/rapier3d-compat': '>=0.14'
       svelte: '>=5'
       three: '>=0.152'
 
-  '@threlte/studio@0.0.1-next.1':
-    resolution: {integrity: sha512-bYnmI/g/TD68YV3w98JGBOaTOee/CYhwxenI3IE15TB1H3uMf8q/pAmSapHyOKK1qY3DAjTYYHEcnn8WVIfvOg==}
+  '@threlte/studio@0.1.3':
+    resolution: {integrity: sha512-YOL3lyLAw2uvxFYbjFOVt01VCQVNBYLsScyKJR7IhESf3npzJqK+N1yIoNUtA6+Jkzs9Wgt1WCi7N+U0ri4c/g==}
     peerDependencies:
       svelte: '>=5'
       three: '>=0.152'
+      vite: '>=5'
 
-  '@threlte/theatre@3.0.0-next.4':
-    resolution: {integrity: sha512-joGD2n4XkxvbdcrjIEu6SCZde2QNSzmcCoiZ72EwBozvD0stxT7daoq4WqcZSF2ppHJ+NAiWbTj1lTNREfeGzg==}
+  '@threlte/theatre@3.0.0':
+    resolution: {integrity: sha512-p5gF4Mu9fRaT6tWiWvHdxjuXf1QAtD7fOnqpIzzA5QYGN3i22CFuwGgb/cd7RxlpWQWp1ZZd5lPdhHWEU638cA==}
     peerDependencies:
       '@theatre/core': '>=0.6'
       '@theatre/studio': '>=0.6'
@@ -1003,8 +1004,8 @@ packages:
       svelte: '>=4'
       three: '>=0.155'
 
-  '@threlte/xr@1.0.0-next.7':
-    resolution: {integrity: sha512-qqid1bXW29aKLRR+M+EUwcRiZQWn4pKTvW7qQi5SIn22as99L0KX9ET4fOqvQy3eIbjURbfyYUjr2ZOxXfGn7g==}
+  '@threlte/xr@1.0.0':
+    resolution: {integrity: sha512-ViIpxpBEiurL/lC7cHse2RMIfc8DWufuD2SIlF7WcXGR7U8Be0l7dmaCWG9TmCL8rjeYKqQgi87Z5UO4isxyoA==}
     peerDependencies:
       svelte: '>=5'
       three: '>=0.155'
@@ -1049,6 +1050,9 @@ packages:
 
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
+
+  '@types/estree@1.0.6':
+    resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
@@ -1195,10 +1199,6 @@ packages:
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
 
-  aria-query@5.3.1:
-    resolution: {integrity: sha512-Z/ZeOgVl7bcSYZ/u/rh0fOpvEpq//LZmdbkXyc7syVzjPAhfOa9ebsdTSjEBDU4vs5nC98Kfduj1uFo0qyET3g==}
-    engines: {node: '>= 0.4'}
-
   aria-query@5.3.2:
     resolution: {integrity: sha512-COROpnaoap1E2F000S62r6A60uHZnmlvomhfyT2DlTcrY1OrBKn2UhH7qn5wTC9zMvD0AY7csdPSNwKP+7WiQw==}
     engines: {node: '>= 0.4'}
@@ -1255,6 +1255,9 @@ packages:
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
+
+  birpc@0.2.19:
+    resolution: {integrity: sha512-5WeXXAvTmitV1RqJFppT5QtUiz2p1mRSYU000Jkft5ZUCLJIk4uQriYNO50HknxKwM6jd8utNc66K1qGIwwWBQ==}
 
   boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
@@ -1523,13 +1526,16 @@ packages:
   esm-env@1.0.0:
     resolution: {integrity: sha512-Cf6VksWPsTuW01vU9Mk/3vRue91Zevka5SjyNf3nEpokFRuqt/KjUQoGAwq9qMmhpLTHmXzSIrFRw8zxWzmFBA==}
 
+  esm-env@1.2.2:
+    resolution: {integrity: sha512-Epxrv+Nr/CaL4ZcFGPJIYLWFom+YeV1DqMLHJoEd9SYRxNbaFruBwfEX/kkHUJf55j2+TUbmDcmuilbP1TmXHA==}
+
   esprima@4.0.1:
     resolution: {integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==}
     engines: {node: '>=4'}
     hasBin: true
 
-  esrap@1.2.2:
-    resolution: {integrity: sha512-F2pSJklxx1BlQIQgooczXCPHmcWpn6EsP5oo73LQfonG9fIlIENQ8vMmfGXeojP9MrkzUNAfyU5vdFlR9shHAw==}
+  esrap@1.4.3:
+    resolution: {integrity: sha512-Xddc1RsoFJ4z9nR7W7BFaEPIp4UXoeQ0+077UdWLxbafMQFyU79sQJMk7kxNgRwQ9/aVgaKacCHC2pUACGwmYw==}
 
   estree-util-attach-comments@3.0.0:
     resolution: {integrity: sha512-cKUwm/HUcTDsYh/9FgnuFqpfquUbwIqwKM26BVCGDPVgvaCl/nDCCjUfiLlx6lsEZ3Z4RFxNbOQ60pkaEwFxGw==}
@@ -1774,6 +1780,10 @@ packages:
   import-meta-resolve@4.1.0:
     resolution: {integrity: sha512-I6fiaX09Xivtk+THaMfAwnA3MVA5Big1WHF1Dfx9hFuvNIWpXnorlkzhcQf6ehrqQiiZECRt1poOAkPmer3ruw==}
 
+  index-to-position@1.0.0:
+    resolution: {integrity: sha512-sCO7uaLVhRJ25vz1o8s9IFM3nVS4DkuQnyjMwiQPKvQuBYBDmb8H7zx8ki7nVh4HJQOdVWebyvLE0qt+clruxA==}
+    engines: {node: '>=18'}
+
   inline-style-parser@0.1.1:
     resolution: {integrity: sha512-7NXolsK4CAS5+xvdj5OMMbI962hU/wvwoxk+LWR9Ek9bVtyuuYScDN6eS0rUm6TxApFpw7CX1o4uJzcd4AyD3Q==}
 
@@ -1847,6 +1857,9 @@ packages:
 
   is-reference@3.0.2:
     resolution: {integrity: sha512-v3rht/LgVcsdZa3O2Nqs+NMowLOxeOm7Ay9+/ARQ2F+qEoANRcqrjAZKGN0v8ymUetZGgkp26LTnGT7H0Qo9Pg==}
+
+  is-reference@3.0.3:
+    resolution: {integrity: sha512-ixkJoqQvAP88E6wLydLGGqCJsrFUnqoH6HnaczB8XmDH1oaWU+xxdptvikTgaEhtZ53Ky6YXiBuUI2WXLMCwjw==}
 
   is-unicode-supported@1.3.0:
     resolution: {integrity: sha512-43r2mRvz+8JRIKnWJ+3j8JtjRKZ6GmjzfaE/qiBJnikNnYv/6bagRJ1kUhNk8R5EX/GkobD+r+sfxCPJsiKBLQ==}
@@ -2806,8 +2819,8 @@ packages:
       svelte: ^3.55 || ^4.0.0-next.0 || ^4.0 || ^5.0.0-next.0
       typescript: ^4.9.4 || ^5.0.0
 
-  svelte@5.0.0-next.257:
-    resolution: {integrity: sha512-fiTimH9UbJ0aNUcsOyaRgq4MZdmgN6lv3sQ2sOMv9V6haK0emsmYCm8Pw10+ej6FhXGALxuWvNdoi7VKMaeIIA==}
+  svelte@5.19.5:
+    resolution: {integrity: sha512-vVAntseegJX80sgbY8CxQISSE/VoDSfP7VZHoQaf2+z+2XOPOz/N+k455HJmO9O0g8oxTtuE0TBhC/5LAP4lPg==}
     engines: {node: '>=18'}
 
   tailwindcss@3.4.4:
@@ -2822,8 +2835,8 @@ packages:
   thenify@3.3.1:
     resolution: {integrity: sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==}
 
-  three-instanced-uniforms-mesh@0.49.1:
-    resolution: {integrity: sha512-qPgPLA6JR2nQau2zAODwiVRknYndXNE6aYmTe5zESiwg9hO8AaNq1xC0hWDYOyyH+NbN2G8278NxX1hpZ+2ZgQ==}
+  three-instanced-uniforms-mesh@0.52.0:
+    resolution: {integrity: sha512-YuJigan74qBmt2X8XX4DCxGl42GQXQZWSyy8jos1kqjPyzR7IVl9Jk4HvOGEzb5pI7phVcaArImhaW2FZH3zpA==}
     peerDependencies:
       three: '>=0.125.0'
 
@@ -2837,10 +2850,16 @@ packages:
     peerDependencies:
       three: '>= 0.159.0'
 
-  three-perf@1.0.10:
-    resolution: {integrity: sha512-lCur/i8U6m0ysWYhQ1yFGWOZB0QA2oVsDsfynYd65HhXxLxJfiAt8OsXmpv9PnTLacfaZclBcZHUOB9QKk3eaw==}
+  three-perf@https://codeload.github.com/jerzakm/three-perf/tar.gz/322d7d38a17069f2b6e9734913edad0fc4a29169:
+    resolution: {tarball: https://codeload.github.com/jerzakm/three-perf/tar.gz/322d7d38a17069f2b6e9734913edad0fc4a29169}
+    version: 1.0.10
     peerDependencies:
-      three: '>=0.151'
+      three: '>=0.170'
+
+  three-viewport-gizmo@2.0.2:
+    resolution: {integrity: sha512-PtdBqtPZbXoQgxXAla393iPs+ox0HbZVKqA1ym3w4z7Og0Ihevg/odxjEYA9R6xwtIqS5qgsz8RyK3z8lFHtpQ==}
+    peerDependencies:
+      three: '>=0.162.0 <1.0.0'
 
   three.quarks@0.15.5:
     resolution: {integrity: sha512-ZI112Z8brSVnVWuL7vfLCMGhcuWSxGr1ihWr5T45v2HensNYwIQcUK8gRw3Dy4SqAYoilJPo4IOLQHIwusn9GQ==}
@@ -2869,8 +2888,13 @@ packages:
     peerDependencies:
       three: '>=0.125.0'
 
-  troika-three-text@0.49.1:
-    resolution: {integrity: sha512-lXGWxgjJP9kw4i4Wh+0k0Q/7cRfS6iOME4knKht/KozPu9GcFA9NnNpRvehIhrUawq9B0ZRw+0oiFHgRO+4Wig==}
+  troika-three-text@0.50.3:
+    resolution: {integrity: sha512-UzbIrgV3fOFmFbFfWIBcBEXEyQovs+LLu15E5xGpSQbo1oZH49A+J9bul4H8H0xLtaLkRTO+LqEsmkaeDtZQfg==}
+    peerDependencies:
+      three: '>=0.125.0'
+
+  troika-three-text@0.52.3:
+    resolution: {integrity: sha512-jLhiwgV8kEkwWjvK12f2fHVpbOC75p7SgPQ0cgcz+IMtN5Bdyg4EuFdwuTOVu9ga8UeYdKBpzd1AxviyixtYTQ==}
     peerDependencies:
       three: '>=0.125.0'
 
@@ -2879,16 +2903,24 @@ packages:
     peerDependencies:
       three: '>=0.125.0'
 
-  troika-three-utils@0.49.0:
-    resolution: {integrity: sha512-umitFL4cT+Fm/uONmaQEq4oZlyRHWwVClaS6ZrdcueRvwc2w+cpNQ47LlJKJswpqtMFWbEhOLy0TekmcPZOdYA==}
+  troika-three-utils@0.50.3:
+    resolution: {integrity: sha512-asQWCESikU58y9cz4OgIjCRlITkDTwf7ds8T9IyWxn7OB2A7XItg2UbHjfexwooTefM+BYbEC4ZKxOUBfbNVLA==}
+    peerDependencies:
+      three: '>=0.125.0'
+
+  troika-three-utils@0.52.0:
+    resolution: {integrity: sha512-00oxqIIehtEKInOTQekgyknBuRUj1POfOUE2q1OmL+Xlpp4gIu+S0oA0schTyXsDS4d9DkR04iqCdD40rF5R6w==}
     peerDependencies:
       three: '>=0.125.0'
 
   troika-worker-utils@0.47.2:
     resolution: {integrity: sha512-mzss4MeyzUkYBppn4x5cdAqrhBHFEuVmMMgLMTyFV23x6GvQMyo+/R5E5Lsbrt7WSt5RfvewjcwD1DChRTA9lA==}
 
-  troika-worker-utils@0.49.0:
-    resolution: {integrity: sha512-1xZHoJrG0HFfCvT/iyN41DvI/nRykiBtHqFkGaGgJwq5iXfIZFBiPPEHFpPpgyKM3Oo5ITHXP5wM2TNQszYdVg==}
+  troika-worker-utils@0.50.0:
+    resolution: {integrity: sha512-BxNk0w6+d9NYd7El/3RzlzH/F2vovJI1FX9Zb+D7fArVM1EsUXj6+wVwJSrfucy6/HYhfbZPu/lD6Miiw9Byiw==}
+
+  troika-worker-utils@0.52.0:
+    resolution: {integrity: sha512-W1CpvTHykaPH5brv5VHLfQo9D1OYuo0cSBEUQFFT/nBUzM8iD6Lq2/tgG/f1OelbAS1WtaTPQzE5uM49egnngw==}
 
   trough@2.2.0:
     resolution: {integrity: sha512-tmMpK00BjZiUyVyvrBK7knerNgmgvcV/KLVyuma/SC+TQN167GrMRciANTz09+k3zW8L8t60jWO1GpfkZdjTaw==}
@@ -2993,6 +3025,16 @@ packages:
 
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
+
+  vite-dev-rpc@0.1.7:
+    resolution: {integrity: sha512-e5HCaGI/5cHSB6wzhQyaH/JhUsPLI+TylHYp8UxAypeZaFoEHvBvRPD0nTYQtUEqeZb8qSznbVM/VznKSVC8/Q==}
+    peerDependencies:
+      vite: ^2.9.0 || ^3.0.0-0 || ^4.0.0-0 || ^5.0.0-0 || ^6.0.1
+
+  vite-hot-client@0.2.4:
+    resolution: {integrity: sha512-a1nzURqO7DDmnXqabFOliz908FRmIppkBKsJthS8rbe8hBEXwEwe4C3Pp33Z1JoFCYfVL4kTOMLKk0ZZxREIeA==}
+    peerDependencies:
+      vite: ^2.6.0 || ^3.0.0 || ^4.0.0 || ^5.0.0-0 || ^6.0.0-0
 
   vite@5.4.11:
     resolution: {integrity: sha512-c7jFQRklXua0mTzneGW9QVyxFjUgwcihC4bXEtujIo2ouWCe1Ajt/amn2PCxYnhYfd5k09JX3SB7OYWFKYqj8Q==}
@@ -3224,8 +3266,8 @@ packages:
     resolution: {integrity: sha512-b4JR1PFR10y1mKjhHY9LaGo6tmrgjit7hxVIeAmyMw3jegXR4dhYqLaQF5zMXZxY7tLpMyJeLjr1C4rLmkVe8g==}
     engines: {node: '>=12.20'}
 
-  yoga-layout@3.1.0:
-    resolution: {integrity: sha512-auzJ8lEovThZIpR8wLGWNo/JEj4VTO79q9/gOJ0dWb3shAYPFdX3t9VN0fC0v+jeQF77STUdCzebLwRMqzn5gQ==}
+  yoga-layout@3.2.1:
+    resolution: {integrity: sha512-0LPOt3AxKqMdFBZA3HBAt/t/8vIKq7VaQYbuA8WxCgung+p9TVyKRYdpvCb80HcdTN2NkbIKbhNwKUfm3tQywQ==}
 
   zimmerframe@1.1.2:
     resolution: {integrity: sha512-rAbqEGa8ovJy4pyBxZM70hg4pE6gDgaQ0Sl9M3enG3I0d6H4XSAM3GeNGLKnsBpuijUow064sf7ww1nutC5/3w==}
@@ -3412,12 +3454,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/svelte@5.7.1(astro@4.16.17(@types/node@20.16.10)(rollup@4.21.2)(sass@1.79.4)(typescript@5.5.2))(svelte@5.0.0-next.257)(typescript@5.5.2)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))':
+  '@astrojs/svelte@5.7.1(astro@4.16.17(@types/node@20.16.10)(rollup@4.21.2)(sass@1.79.4)(typescript@5.5.2))(svelte@5.19.5)(typescript@5.5.2)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 3.1.2(svelte@5.0.0-next.257)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))
+      '@sveltejs/vite-plugin-svelte': 3.1.2(svelte@5.19.5)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))
       astro: 4.16.17(@types/node@20.16.10)(rollup@4.21.2)(sass@1.79.4)(typescript@5.5.2)
-      svelte: 5.0.0-next.257
-      svelte2tsx: 0.7.19(svelte@5.0.0-next.257)(typescript@5.5.2)
+      svelte: 5.19.5
+      svelte2tsx: 0.7.19(svelte@5.19.5)(typescript@5.5.2)
       typescript: 5.5.2
     transitivePeerDependencies:
       - supports-color
@@ -4125,24 +4167,24 @@ snapshots:
 
   '@stackblitz/sdk@1.11.0': {}
 
-  '@sveltejs/vite-plugin-svelte-inspector@2.1.0(@sveltejs/vite-plugin-svelte@3.1.2(svelte@5.0.0-next.257)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4)))(svelte@5.0.0-next.257)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))':
+  '@sveltejs/vite-plugin-svelte-inspector@2.1.0(@sveltejs/vite-plugin-svelte@3.1.2(svelte@5.19.5)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4)))(svelte@5.19.5)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 3.1.2(svelte@5.0.0-next.257)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))
+      '@sveltejs/vite-plugin-svelte': 3.1.2(svelte@5.19.5)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))
       debug: 4.3.7
-      svelte: 5.0.0-next.257
+      svelte: 5.19.5
       vite: 5.4.11(@types/node@20.16.10)(sass@1.79.4)
     transitivePeerDependencies:
       - supports-color
 
-  '@sveltejs/vite-plugin-svelte@3.1.2(svelte@5.0.0-next.257)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))':
+  '@sveltejs/vite-plugin-svelte@3.1.2(svelte@5.19.5)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte-inspector': 2.1.0(@sveltejs/vite-plugin-svelte@3.1.2(svelte@5.0.0-next.257)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4)))(svelte@5.0.0-next.257)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))
+      '@sveltejs/vite-plugin-svelte-inspector': 2.1.0(@sveltejs/vite-plugin-svelte@3.1.2(svelte@5.19.5)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4)))(svelte@5.19.5)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))
       debug: 4.3.7
       deepmerge: 4.3.1
       kleur: 4.1.5
       magic-string: 0.30.11
-      svelte: 5.0.0-next.257
-      svelte-hmr: 0.16.0(svelte@5.0.0-next.257)
+      svelte: 5.19.5
+      svelte-hmr: 0.16.0(svelte@5.19.5)
       vite: 5.4.11(@types/node@20.16.10)(sass@1.79.4)
       vitefu: 0.2.5(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))
     transitivePeerDependencies:
@@ -4165,71 +4207,80 @@ snapshots:
       '@theatre/core': 0.6.2
       '@theatre/dataverse': 0.7.2
 
-  '@threejs-kit/instanced-sprite-mesh@2.4.7(@types/three@0.169.0)(three@0.169.0)':
+  '@threejs-kit/instanced-sprite-mesh@2.5.0(@types/three@0.169.0)(three@0.169.0)':
     dependencies:
       diet-sprite: 0.0.1
       earcut: 2.2.4
       maath: 0.10.8(@types/three@0.169.0)(three@0.169.0)
       three: 0.169.0
-      three-instanced-uniforms-mesh: 0.49.1(three@0.169.0)
-      troika-three-utils: 0.49.0(three@0.169.0)
+      three-instanced-uniforms-mesh: 0.52.0(three@0.169.0)
+      troika-three-utils: 0.52.0(three@0.169.0)
     transitivePeerDependencies:
       - '@types/three'
 
-  '@threlte/core@8.0.0-next.17(svelte@5.0.0-next.257)(three@0.169.0)':
+  '@threlte/core@8.0.1(svelte@5.19.5)(three@0.169.0)':
     dependencies:
       mitt: 3.0.1
-      svelte: 5.0.0-next.257
+      svelte: 5.19.5
       three: 0.169.0
 
-  '@threlte/extras@9.0.0-next.23(@types/three@0.169.0)(svelte@5.0.0-next.257)(three@0.169.0)':
+  '@threlte/extras@9.0.1(@types/three@0.169.0)(svelte@5.19.5)(three@0.169.0)':
     dependencies:
-      '@threejs-kit/instanced-sprite-mesh': 2.4.7(@types/three@0.169.0)(three@0.169.0)
-      svelte: 5.0.0-next.257
+      '@threejs-kit/instanced-sprite-mesh': 2.5.0(@types/three@0.169.0)(three@0.169.0)
+      camera-controls: 2.9.0(three@0.169.0)
+      svelte: 5.19.5
       three: 0.169.0
       three-mesh-bvh: 0.7.6(three@0.169.0)
-      three-perf: 1.0.10(three@0.169.0)
-      troika-three-text: 0.49.1(three@0.169.0)
+      three-perf: https://codeload.github.com/jerzakm/three-perf/tar.gz/322d7d38a17069f2b6e9734913edad0fc4a29169(three@0.169.0)
+      three-viewport-gizmo: 2.0.2(three@0.169.0)
+      troika-three-text: 0.50.3(three@0.169.0)
     transitivePeerDependencies:
       - '@types/three'
 
-  '@threlte/flex@2.0.0-next.7(svelte@5.0.0-next.257)(three@0.169.0)':
+  '@threlte/flex@2.0.0(svelte@5.19.5)(three@0.169.0)':
     dependencies:
       mitt: 3.0.1
-      svelte: 5.0.0-next.257
+      svelte: 5.19.5
       three: 0.169.0
-      yoga-layout: 3.1.0
+      yoga-layout: 3.2.1
 
-  '@threlte/rapier@3.0.0-next.10(@dimforge/rapier3d-compat@0.14.0)(svelte@5.0.0-next.257)(three@0.169.0)':
+  '@threlte/rapier@3.0.0(@dimforge/rapier3d-compat@0.14.0)(svelte@5.19.5)(three@0.169.0)':
     dependencies:
       '@dimforge/rapier3d-compat': 0.14.0
-      svelte: 5.0.0-next.257
+      svelte: 5.19.5
       three: 0.169.0
 
-  '@threlte/studio@0.0.1-next.1(svelte@5.0.0-next.257)(three@0.169.0)':
+  '@threlte/studio@0.1.3(svelte@5.19.5)(three@0.169.0)(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))':
     dependencies:
       '@floating-ui/dom': 1.6.11
       '@mdi/js': 7.4.47
       '@tweakpane/plugin-camerakit': 0.3.0(tweakpane@4.0.3)
       camera-controls: 2.9.0(three@0.169.0)
+      estree-walker: 3.0.3
       flexible-tree: 0.1.6
-      svelte: 5.0.0-next.257
-      svelte-tweakpane-ui: 1.3.0(svelte@5.0.0-next.257)
+      index-to-position: 1.0.0
+      json5: 2.2.3
+      kleur: 4.1.5
+      magic-string: 0.30.17
+      svelte: 5.19.5
+      svelte-tweakpane-ui: 1.3.0(svelte@5.19.5)
       three: 0.169.0
       tweakpane: 4.0.3
+      vite: 5.4.11(@types/node@20.16.10)(sass@1.79.4)
+      vite-dev-rpc: 0.1.7(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))
 
-  '@threlte/theatre@3.0.0-next.4(@theatre/core@0.6.2)(@theatre/studio@0.7.2(@theatre/core@0.6.2))(@threlte/core@8.0.0-next.17(svelte@5.0.0-next.257)(three@0.169.0))(@threlte/extras@9.0.0-next.23(@types/three@0.169.0)(svelte@5.0.0-next.257)(three@0.169.0))(svelte@5.0.0-next.257)(three@0.169.0)':
+  '@threlte/theatre@3.0.0(@theatre/core@0.6.2)(@theatre/studio@0.7.2(@theatre/core@0.6.2))(@threlte/core@8.0.1(svelte@5.19.5)(three@0.169.0))(@threlte/extras@9.0.1(@types/three@0.169.0)(svelte@5.19.5)(three@0.169.0))(svelte@5.19.5)(three@0.169.0)':
     dependencies:
       '@theatre/core': 0.6.2
       '@theatre/studio': 0.7.2(@theatre/core@0.6.2)
-      '@threlte/core': 8.0.0-next.17(svelte@5.0.0-next.257)(three@0.169.0)
-      '@threlte/extras': 9.0.0-next.23(@types/three@0.169.0)(svelte@5.0.0-next.257)(three@0.169.0)
-      svelte: 5.0.0-next.257
+      '@threlte/core': 8.0.1(svelte@5.19.5)(three@0.169.0)
+      '@threlte/extras': 9.0.1(@types/three@0.169.0)(svelte@5.19.5)(three@0.169.0)
+      svelte: 5.19.5
       three: 0.169.0
 
-  '@threlte/xr@1.0.0-next.7(svelte@5.0.0-next.257)(three@0.169.0)':
+  '@threlte/xr@1.0.0(svelte@5.19.5)(three@0.169.0)':
     dependencies:
-      svelte: 5.0.0-next.257
+      svelte: 5.19.5
       three: 0.169.0
 
   '@tweakpane/core@2.0.3': {}
@@ -4242,7 +4293,7 @@ snapshots:
 
   '@types/acorn@4.0.6':
     dependencies:
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.6
 
   '@types/animejs@3.1.12': {}
 
@@ -4278,6 +4329,8 @@ snapshots:
       '@types/estree': 1.0.5
 
   '@types/estree@1.0.5': {}
+
+  '@types/estree@1.0.6': {}
 
   '@types/hast@3.0.4':
     dependencies:
@@ -4384,13 +4437,13 @@ snapshots:
 
   '@webgpu/types@0.1.44': {}
 
-  acorn-jsx@5.3.2(acorn@8.12.1):
+  acorn-jsx@5.3.2(acorn@8.14.0):
     dependencies:
-      acorn: 8.12.1
+      acorn: 8.14.0
 
-  acorn-typescript@1.4.13(acorn@8.12.1):
+  acorn-typescript@1.4.13(acorn@8.14.0):
     dependencies:
-      acorn: 8.12.1
+      acorn: 8.14.0
 
   acorn@8.12.1: {}
 
@@ -4437,8 +4490,6 @@ snapshots:
       sprintf-js: 1.0.3
 
   argparse@2.0.1: {}
-
-  aria-query@5.3.1: {}
 
   aria-query@5.3.2: {}
 
@@ -4565,6 +4616,8 @@ snapshots:
       require-from-string: 2.0.2
 
   binary-extensions@2.3.0: {}
+
+  birpc@0.2.19: {}
 
   boolbase@1.0.0: {}
 
@@ -4805,12 +4858,13 @@ snapshots:
 
   esm-env@1.0.0: {}
 
+  esm-env@1.2.2: {}
+
   esprima@4.0.1: {}
 
-  esrap@1.2.2:
+  esrap@1.4.3:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
-      '@types/estree': 1.0.5
 
   estree-util-attach-comments@3.0.0:
     dependencies:
@@ -4840,7 +4894,7 @@ snapshots:
 
   estree-walker@3.0.3:
     dependencies:
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.6
 
   eventemitter3@5.0.1: {}
 
@@ -5195,6 +5249,8 @@ snapshots:
 
   import-meta-resolve@4.1.0: {}
 
+  index-to-position@1.0.0: {}
+
   inline-style-parser@0.1.1: {}
 
   inline-style-parser@0.2.3: {}
@@ -5246,7 +5302,11 @@ snapshots:
 
   is-reference@3.0.2:
     dependencies:
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.6
+
+  is-reference@3.0.3:
+    dependencies:
+      '@types/estree': 1.0.6
 
   is-unicode-supported@1.3.0: {}
 
@@ -5636,7 +5696,7 @@ snapshots:
 
   micromark-extension-mdx-expression@3.0.0:
     dependencies:
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.6
       devlop: 1.1.0
       micromark-factory-mdx-expression: 2.0.1
       micromark-factory-space: 2.0.0
@@ -5648,7 +5708,7 @@ snapshots:
   micromark-extension-mdx-jsx@3.0.0:
     dependencies:
       '@types/acorn': 4.0.6
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.6
       devlop: 1.1.0
       estree-util-is-identifier-name: 3.0.0
       micromark-factory-mdx-expression: 2.0.1
@@ -5664,7 +5724,7 @@ snapshots:
 
   micromark-extension-mdxjs-esm@3.0.0:
     dependencies:
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.6
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.1
       micromark-util-character: 2.1.0
@@ -5676,8 +5736,8 @@ snapshots:
 
   micromark-extension-mdxjs@3.0.0:
     dependencies:
-      acorn: 8.12.1
-      acorn-jsx: 5.3.2(acorn@8.12.1)
+      acorn: 8.14.0
+      acorn-jsx: 5.3.2(acorn@8.14.0)
       micromark-extension-mdx-expression: 3.0.0
       micromark-extension-mdx-jsx: 3.0.0
       micromark-extension-mdx-md: 2.0.0
@@ -5700,7 +5760,7 @@ snapshots:
 
   micromark-factory-mdx-expression@2.0.1:
     dependencies:
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.6
       devlop: 1.1.0
       micromark-util-character: 2.1.0
       micromark-util-events-to-acorn: 2.0.2
@@ -5764,7 +5824,7 @@ snapshots:
   micromark-util-events-to-acorn@2.0.2:
     dependencies:
       '@types/acorn': 4.0.6
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.6
       '@types/unist': 3.0.2
       devlop: 1.1.0
       estree-util-visit: 2.0.0
@@ -6341,10 +6401,10 @@ snapshots:
     dependencies:
       queue-microtask: 1.2.3
 
-  runed@0.15.3(svelte@5.0.0-next.257):
+  runed@0.15.3(svelte@5.19.5):
     dependencies:
       esm-env: 1.0.0
-      svelte: 5.0.0-next.257
+      svelte: 5.19.5
 
   s.color@0.0.15: {}
 
@@ -6530,17 +6590,17 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-hmr@0.16.0(svelte@5.0.0-next.257):
+  svelte-hmr@0.16.0(svelte@5.19.5):
     dependencies:
-      svelte: 5.0.0-next.257
+      svelte: 5.19.5
 
-  svelte-local-storage-store@0.6.4(svelte@5.0.0-next.257):
+  svelte-local-storage-store@0.6.4(svelte@5.19.5):
     dependencies:
-      svelte: 5.0.0-next.257
+      svelte: 5.19.5
 
   svelte-portal@2.2.1: {}
 
-  svelte-tweakpane-ui@1.3.0(svelte@5.0.0-next.257):
+  svelte-tweakpane-ui@1.3.0(svelte@5.19.5):
     dependencies:
       '@kitschpatrol/tweakpane-plugin-camerakit': 0.3.0(tweakpane@4.0.3)
       '@kitschpatrol/tweakpane-plugin-essentials': 0.2.1(tweakpane@4.0.3)
@@ -6554,31 +6614,32 @@ snapshots:
       fast-copy: 3.0.1
       fast-equals: 5.0.1
       nanoid: 5.0.6
-      svelte: 5.0.0-next.257
-      svelte-local-storage-store: 0.6.4(svelte@5.0.0-next.257)
+      svelte: 5.19.5
+      svelte-local-storage-store: 0.6.4(svelte@5.19.5)
       tweakpane: 4.0.3
 
-  svelte2tsx@0.7.19(svelte@5.0.0-next.257)(typescript@5.5.2):
+  svelte2tsx@0.7.19(svelte@5.19.5)(typescript@5.5.2):
     dependencies:
       dedent-js: 1.0.1
       pascal-case: 3.1.2
-      svelte: 5.0.0-next.257
+      svelte: 5.19.5
       typescript: 5.5.2
 
-  svelte@5.0.0-next.257:
+  svelte@5.19.5:
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@jridgewell/sourcemap-codec': 1.5.0
       '@types/estree': 1.0.5
-      acorn: 8.12.1
-      acorn-typescript: 1.4.13(acorn@8.12.1)
-      aria-query: 5.3.1
+      acorn: 8.14.0
+      acorn-typescript: 1.4.13(acorn@8.14.0)
+      aria-query: 5.3.2
       axobject-query: 4.1.0
-      esm-env: 1.0.0
-      esrap: 1.2.2
-      is-reference: 3.0.2
+      clsx: 2.1.1
+      esm-env: 1.2.2
+      esrap: 1.4.3
+      is-reference: 3.0.3
       locate-character: 3.0.0
-      magic-string: 0.30.11
+      magic-string: 0.30.17
       zimmerframe: 1.1.2
 
   tailwindcss@3.4.4:
@@ -6616,10 +6677,10 @@ snapshots:
     dependencies:
       any-promise: 1.3.0
 
-  three-instanced-uniforms-mesh@0.49.1(three@0.169.0):
+  three-instanced-uniforms-mesh@0.52.0(three@0.169.0):
     dependencies:
       three: 0.169.0
-      troika-three-utils: 0.49.0(three@0.169.0)
+      troika-three-utils: 0.52.0(three@0.169.0)
 
   three-mesh-bvh@0.7.6(three@0.169.0):
     dependencies:
@@ -6629,11 +6690,15 @@ snapshots:
     dependencies:
       three: 0.169.0
 
-  three-perf@1.0.10(three@0.169.0):
+  three-perf@https://codeload.github.com/jerzakm/three-perf/tar.gz/322d7d38a17069f2b6e9734913edad0fc4a29169(three@0.169.0):
     dependencies:
       three: 0.169.0
-      troika-three-text: 0.47.2(three@0.169.0)
+      troika-three-text: 0.52.3(three@0.169.0)
       tweakpane: 3.1.10
+
+  three-viewport-gizmo@2.0.2(three@0.169.0):
+    dependencies:
+      three: 0.169.0
 
   three.quarks@0.15.5(three@0.169.0):
     dependencies:
@@ -6662,25 +6727,39 @@ snapshots:
       troika-worker-utils: 0.47.2
       webgl-sdf-generator: 1.1.1
 
-  troika-three-text@0.49.1(three@0.169.0):
+  troika-three-text@0.50.3(three@0.169.0):
     dependencies:
       bidi-js: 1.0.3
       three: 0.169.0
-      troika-three-utils: 0.49.0(three@0.169.0)
-      troika-worker-utils: 0.49.0
+      troika-three-utils: 0.50.3(three@0.169.0)
+      troika-worker-utils: 0.50.0
+      webgl-sdf-generator: 1.1.1
+
+  troika-three-text@0.52.3(three@0.169.0):
+    dependencies:
+      bidi-js: 1.0.3
+      three: 0.169.0
+      troika-three-utils: 0.52.0(three@0.169.0)
+      troika-worker-utils: 0.52.0
       webgl-sdf-generator: 1.1.1
 
   troika-three-utils@0.47.2(three@0.169.0):
     dependencies:
       three: 0.169.0
 
-  troika-three-utils@0.49.0(three@0.169.0):
+  troika-three-utils@0.50.3(three@0.169.0):
+    dependencies:
+      three: 0.169.0
+
+  troika-three-utils@0.52.0(three@0.169.0):
     dependencies:
       three: 0.169.0
 
   troika-worker-utils@0.47.2: {}
 
-  troika-worker-utils@0.49.0: {}
+  troika-worker-utils@0.50.0: {}
+
+  troika-worker-utils@0.52.0: {}
 
   trough@2.2.0: {}
 
@@ -6794,6 +6873,16 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.2
       vfile-message: 4.0.2
+
+  vite-dev-rpc@0.1.7(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4)):
+    dependencies:
+      birpc: 0.2.19
+      vite: 5.4.11(@types/node@20.16.10)(sass@1.79.4)
+      vite-hot-client: 0.2.4(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4))
+
+  vite-hot-client@0.2.4(vite@5.4.11(@types/node@20.16.10)(sass@1.79.4)):
+    dependencies:
+      vite: 5.4.11(@types/node@20.16.10)(sass@1.79.4)
 
   vite@5.4.11(@types/node@20.16.10)(sass@1.79.4):
     dependencies:
@@ -7006,7 +7095,7 @@ snapshots:
 
   yocto-queue@1.1.1: {}
 
-  yoga-layout@3.1.0: {}
+  yoga-layout@3.2.1: {}
 
   zimmerframe@1.1.2: {}
 
